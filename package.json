@@ -1,0 +1,27 @@
+{
+  "name": "gti-sos-sos2122-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Cool.js",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4",
+    "express": "^4.17.3",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Cool.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/gti-sos-SOS2122-11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/gti-sos-SOS2122-11/issues"
+  },
+  "homepage": "https://github.com/gti-sos/gti-sos-SOS2122-11#readme"
+}
