@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gti-sos/gti-sos-SOS2122-11.git"
+    "url": "git+https://github.com/gti-sos/SOS2122-11.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gti-sos/gti-sos-SOS2122-11/issues"
+    "url": "https://github.com/gti-sos/SOS2122-11/issues"
   },
-  "homepage": "https://github.com/gti-sos/gti-sos-SOS2122-11#readme"
+  "homepage": "https://github.com/gti-sos/SOS2122-11#readme"
 }
