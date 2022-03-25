@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx newman run ./tests/backend.json -e ./tests/env/Local.json",
     "start": "node Cool.js"
 
   },
