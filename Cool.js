@@ -92,14 +92,23 @@ var inequalitystatsInit = [
         lifes:10.9
     }];
 
-var inequalitystats = [
-    {}
+	app.get(BASE_API_URL+"/inequality-stats/docs",(req,res)=>{
     
-];
+		res.writeHead(301,
+			{Location: 'http://app.example.io'}
+		  );
+		  res.end();
+});
+
+var inequalitystats =[];
 
 app.get(BASE_API_URL+"/inequality-stats/loadInitialData",(req,res)=>{
-    inequalitystats= inequalitystatsInit;
-    res.send("Datos cargados");
+    
+		
+		inequalitystats= JSON.parse(JSON.stringify(inequalitystatsInit));
+		console.log(JSON.stringify(inequalitystats, null));
+		res.status(200).send("<h3>Successfuly loaded "+ inequalitystats.length + " resources</h3><p>You can head now to /api/v1/inequality-stats to check newly created resources</p>")
+	
 });
 
 app.get(BASE_API_URL+"/inequality-stats",(req,res)=>{
@@ -117,7 +126,7 @@ app.get(BASE_API_URL+"/inequality-stats/:country/:year", (req, res) => {
 	if (isAO(country) && country != null) {
 		res.status(200).send(JSON.stringify(country, null, 2));	
 	} else {
-		console.log("[!] Someone has tried to GET a non-existent resource: \n-->" + req.params.country + "/" + request.params.year);
+		console.log("[!] Someone has tried to GET a non-existent resource: \n-->" + req.params.country + "/" + req.params.year);
 		res.status(404).send("<p>404: Resource not found</p>");	
 	}
 });
@@ -195,19 +204,17 @@ app.put(BASE_API_URL+"/inequality-stats/", (req,res)=>{
 app.put(BASE_API_URL+"/inequality-stats/:country/:year/", (req,res)=>{
     var updateCountry = req.body;
 	var oldCountry;
-	var del_index;
 	console.log(`[!] New country to update: <${JSON.stringify(updateCountry, null)}>`);
-	for(var i=0; i<inequalitystats.length; i++){
-		if(inequalitystats[i].country==req.params.country && inequalitystats[i].year==req.params.year){
-			oldCountry = inequalitystats[i];
-			del_index = i;
+			inequalitystats.forEach(function(obj) {
+		if (obj.country == req.params.country && obj.year == req.params.year) {
+			oldCountry = obj;
 		}
-	}
+	});
 	if (oldCountry != null) {
 		console.log("[-] Delete "+ JSON.stringify(oldCountry, null)+" to add resource: \n-->"+ JSON.stringify(updateCountry, null));
-		inequalitystats.splice(del_index, 1);
+		delete inequalitystats[oldCountry];
 		res.status(200).send("<p>Resource updated.</p>");
-		inequalitystats.push(updateCountry);
+		inequalitystats.push(updateCountry);	
 	} else {
 		console.log("[!] Someone has tried to update a non-existent resource: \n-->" + JSON.stringify(oldCountry, null));
 		res.status(400).send("<p>Resource not found, can't delete.</p>");

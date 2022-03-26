@@ -12,7 +12,6 @@
   "scripts": {
     "test": "npx newman run ./tests/backend.json -e ./tests/env/Local.json",
     "start": "node Cool.js"
-
   },
   "repository": {
     "type": "git",
