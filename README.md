@@ -2,11 +2,11 @@
 - **Team**
   - [Antonio Maiquez Marin](https://github.com/Jackman97)
   - [David Sousa Gonzalez](https://github.com/dasougon7)
-  - [Ignacion Mauri Caceres](https://github.com/404)
+  - [Ignacion Mauri Caceres](https://github.com/nachomc01)
 - **Project description**: Nuestras fuentes de información esta orientadas a analizar la relación que existe entre el nivel de desigualdad economica, el PIB y el numero de parados a nivel mundial
 - **Repository**: [gti-sos/SOS2122-11](https://github.com/gti-sos/SOS2122-11)
 - **URL**: [http://sos2122-11.herokuapp.com](http://sos2122-11.herokuapp.com)
 -  **APIs**:
-    - [https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-1/docs](https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-1/docs) (developed by [Roque Fernandez Iglesias](https://github.com/roque-fernandez))
-    - [https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-2/docs](https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-2/docs) (developed by [Fco Alexis Morales Vallado](https://github.com/famvcucu))
-    - [https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-3/docs](https://sos2021-11.herokuapp.com/api/v1/my-awesome-resource-3/docs) (developed by [Ignacio Mauri Caceres - ](https://github.com/nachomc01))
+    - [https://sos2122-11.herokuapp.com/api/v1/inequality-stats/docs](https://sos2122-11.herokuapp.com/api/v1/inequality-stats/docs) (developed by [Antonio Maiquez Marin](https://github.com/Jackman97))
+    - [https://sos2122-27.herokuapp.com/api/v1/education-stats](https://sos2122-27.herokuapp.com/api/v1/education-stats) (developed by [David Sousa Gonzalez](https://github.com/dasougon7))
+    - [https://sos2122-11.herokuapp.com/api/v1/public-debt-stats/docs](https://sos2122-11.herokuapp.com/api/v1/public-debt-stats/docs) (developed by [Ignacio Mauri Caceres - ](https://github.com/nachomc01))
