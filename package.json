@@ -2,16 +2,20 @@
   "name": "gti-sos-sos2122-11",
   "version": "1.0.0",
   "description": "",
-  "main": "Cool.js",
+  "main": "Index.js",
   "dependencies": {
     "cool-ascii-faces": "^1.3.4",
     "express": "^4.17.3",
-    "package.json": "^2.0.1"
+    "fs": "0.0.1-security",
+    "nedb": "^1.8.0",
+    "package.json": "^2.0.1",
+    "path": "^0.12.7",
+    "serve-index": "^1.9.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "npx newman run ./tests/backend.json -e ./tests/env/Local.json",
-    "start": "node Cool.js"
+    "start": "node Index.js"
   },
   "repository": {
     "type": "git",
