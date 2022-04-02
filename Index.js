@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 const BASE_API_URL = "/api/v1"; 
 
-const Ineq_api = require("./inequality-stats");
+const Ineq_api = require("./src/back/Inequality-stats");
 Ineq_api.register(app);
 
 app.use("/",express.static('public'));
