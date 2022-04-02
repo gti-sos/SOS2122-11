@@ -4,7 +4,7 @@ var path = require('path');
 var Datastore = require("nedb");
 var dbFile = path.join(__dirname, 'inequality-stats.db');
 var db = new Datastore({filename: dbFile,autoload:true});
-const express = require("express");
+
 
 
 const port = process.env.PORT || 8080;

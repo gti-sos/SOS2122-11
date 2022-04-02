@@ -6,7 +6,7 @@ const { application } = require("express");
 var serveIndex = require('serve-index');
 const fs = require('fs');
 const app=express();
-app.use(bodyParser.json());
+
 
 //Inicializa en otro archivo 
 //const backend = require("./src/back");
@@ -17,11 +17,11 @@ app.use(bodyParser.json());
 
 
 const port= process.env.PORT || 8080;
-
+app.use(bodyParser.json());
 
 const BASE_API_URL = "/api/v1"; 
 
-var Ineq_api = require("./inequality-stats");
+const Ineq_api = require("./inequality-stats");
 Ineq_api.register(app);
 
 app.use("/",express.static('public'));
