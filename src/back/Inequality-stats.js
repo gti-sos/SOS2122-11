@@ -36,21 +36,21 @@ function isAO(val) {
 
 var inequalitystatsInit = [
     {
-        country:"iraq",
+        country:"Iraq",
         year:2018,
         coefficients:19.4,
         educations:29.7,
         lifes:15.9
     },
     {
-        country:"afghanistan",
+        country:"Afghanistan",
         year:2015,
         coefficients:30.4,
         educations:44.8,
         lifes:35.7
     },
     {
-        country:"pakistan",
+        country:"Pakistan",
         year:2018,
         coefficients:29.6,
         educations:43.5,
@@ -86,21 +86,10 @@ module.exports.register = (app) => {
 
     //carga inicial de datos
 	app.get(BASE_API_PATH  + "/loadInitialData", (req, res) => {
-		if (inequalitystats.length == 0) {
-            try {
-            let rawdata = fs.readFileSync('./src/back/inequality-stats.json');
-            inequalitystats = JSON.parse(rawdata);
-            db.insert(inequalitystats);
-            } catch {
-                console.log('Error parsing .json file');
-        }
-            console.log('[!] inequality-stats.json loaded into inequalitystats');
-            console.log(JSON.stringify(inequalitystats, null));
-            res.status(200).send("<h3>Successfuly loaded "+ inequalitystats.length + " resources</h3><p>You can head now to /api/v1/inequality-stats to check newly created resources</p>")
-        } else {
-            console.log('[!] GET request to /loadInitialData but resources are already loaded.');
-            res.status(400).send("<h1>Resources already loaded. Head back to /api/v1/inequality-stats to check them.</h1>")
-        }
+		db.remove({}, {multi: true});
+        db.insert(inequalitystatsInit);
+        console.log(`Initial data: <${JSON.stringify(inequalitystatsInit, null, 2)}>`);
+        res.sendStatus(200);
 	});
 
     app.get(BASE_API_PATH , (req, res) => {
@@ -200,6 +189,7 @@ app.post(BASE_API_PATH + "/:country/:year", (req,res) => {
 });
 
 app.delete(BASE_API_PATH, (req,res) => {
+
     db.remove({},{multi: true},(err, numIneqRemoved)=>{
         if(err){
             console.error("ERROR deleting DB evictions: "+err);
@@ -220,18 +210,21 @@ app.delete(BASE_API_PATH + "/:country/:year", (req,res) => {
 
 			
     var country = req.params.country;
-    var year = req.params.year;
-    var n1=db.length;
-    db.remove({ country: country, year: year });
-    var n2=db.legth;
-    if(n1!=n2){
-        
-        res.status(200).send("<h1> Resource deleted " + country + "/" + year + " has been deleted");
-
-    }else{
-       res.status(400).send("<h1> Resource not deleted");
-    }
+    var year = parseInt(req.params.year);
     
+    db.remove({ country: country, year: year },{},(err, data)=>{
+        if(err){
+            console.error("ERROR deleting the resource in DELETE: "+err);
+            res.sendStatus(500);
+        }else{
+            if(data==0){
+                console.log("No data found to delete");
+                res.sendStatus(404); // NOT FOUND
+            }else{
+                res.sendStatus(200); // OK
+            }
+        }
+    })
 
 });
 
@@ -243,7 +236,7 @@ app.put(BASE_API_PATH, (req,res) => {
 app.put(BASE_API_PATH + "/:country/:year", (req, res) => {
 	
     var country = req.params.country;
-    var year = req.params.year;
+    var year = parseInt(req.params.year);
     var updateineq = req.body;
     var query = {"country":country, "year":year};
     console.log(req.body);
