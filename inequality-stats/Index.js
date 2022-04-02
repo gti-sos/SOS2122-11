@@ -4,9 +4,11 @@ var path = require('path');
 var Datastore = require("nedb");
 var dbFile = path.join(__dirname, 'inequality-stats.db');
 var db = new Datastore({filename: dbFile,autoload:true});
+const express = require("express");
 
-//const express = require("express");
-//const bodyParser = require("body-parser");
+
+const port = process.env.PORT || 8080;
+
 //const res = require("express/lib/response");
 //const { application } = require("express");
 
@@ -81,11 +83,24 @@ var inequalitystatsInit = [
 var inequalitystats =[];
 
 module.exports.register = (app) => {
+
     //carga inicial de datos
 	app.get(BASE_API_PATH  + "/loadInitialData", (req, res) => {
-		db.insert(inequality_stats);
-		console.log(`Initial data: <${JSON.stringify(inequality_stats, null, 2)}>`);
-		res.sendStatus(200);
+		if (inequalitystats.length == 0) {
+            try {
+            let rawdata = fs.readFileSync('./inequality-stats/inequality-stats.json');
+            inequalitystats = JSON.parse(rawdata);
+            db.insert(inequalitystats);
+            } catch {
+                console.log('Error parsing .json file');
+        }
+            console.log('[!] inequality-stats.json loaded into inequalitystats');
+            console.log(JSON.stringify(inequalitystats, null));
+            res.status(200).send("<h3>Successfuly loaded "+ inequalitystats.length + " resources</h3><p>You can head now to /api/v1/inequality-stats to check newly created resources</p>")
+        } else {
+            console.log('[!] GET request to /loadInitialData but resources are already loaded.');
+            res.status(400).send("<h1>Resources already loaded. Head back to /api/v1/inequality-stats to check them.</h1>")
+        }
 	});
 
     app.get(BASE_API_PATH , (req, res) => {
@@ -129,11 +144,14 @@ module.exports.register = (app) => {
  //GET a un recurso -- CODIGO NUEVO
  app.get(BASE_API_PATH + "/:country/:year", (req, res) => {
     var countryToGet = req.params.country;
-    var yearToGet = req.params.year;
+    var yearToGet = parseInt(req.params.year);
+   
     
     
     db.find({country: countryToGet, year: yearToGet}, function(err, ineqInDB){
     console.log("Searching "+countryToGet+" "+yearToGet);
+    console.log(ineqInDB);
+
         if(err) {
             console.error(err);
             res.sendStatus(404);
@@ -146,7 +164,7 @@ module.exports.register = (app) => {
             var ineqToSend = ineqInDB.map((c)=>{
                 return {country : c.country, year : c.year, coefficients : c.coefficients, educations : c.educations, lifes : c.lifes};
             });
-            res.send(JSON.stringify(duToSend[0],null,2));
+            res.send(JSON.stringify(ineqToSend[0],null,2));
         }
         
     })
@@ -201,22 +219,18 @@ app.delete(BASE_API_PATH, (req,res) => {
 app.delete(BASE_API_PATH + "/:country/:year", (req,res) => {
 
 			
-    var countryToDelete = req.params.country;
-    var yearToDelete = req.params.year;
-    
-    db.remove({country: countryToDelete, year: yearToDelete},{},(err, data)=>{
-        if(err){
-            console.error("ERROR deleting the resource in DELETE: "+err);
-            res.sendStatus(500);
-        }else{
-            if(data==0){
-                console.log("No data found to delete");
-                res.sendStatus(404); // NOT FOUND
-            }else{
-                res.sendStatus(200); // OK
-            }
-        }
-    })
+    var country = req.params.country;
+    var year = req.params.year;
+    var n1=db.length;
+    db.remove({ country: country, year: year });
+    var n2=db.legth;
+    if(n1!=n2){
+        
+        res.status(200).send("<h1> Resource deleted " + country + "/" + year + " has been deleted");
+
+    }else{
+       res.status(400).send("<h1> Resource not deleted");
+    }
     
 
 });
@@ -232,16 +246,15 @@ app.put(BASE_API_PATH + "/:country/:year", (req, res) => {
     var year = req.params.year;
     var updateineq = req.body;
     var query = {"country":country, "year":year};
-
-    if (!updateddu.country 
-        || !updateddu.year 
-        || !updateineq['coefficients'] 
-        || !updateineq['educations'] 
-        || !updateineq['lifes'] 
-        || country != updateineq.country 
-        || year != updateineq.year
-        || Object.keys(updateineq).length != 5){
-
+    console.log(req.body);
+    //console.log(res);
+    if (!updateineq.country 
+        | !updateineq.year 
+        | !updateineq.coefficients 
+        | !updateineq.educations 
+        | !updateineq.lifes
+        | country != updateineq.country 
+        | year != updateineq.year){
         console.log("Missing any field");
         return res.sendStatus(400);
     } 
