@@ -9,6 +9,7 @@
     "express": "^4.17.3",
     "fs": "0.0.1-security",
     "nedb": "^1.8.0",
+    "newman": "^5.3.2",
     "package.json": "^2.0.1",
     "path": "^0.12.7",
     "serve-index": "^1.9.1"
