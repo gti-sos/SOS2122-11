@@ -14,7 +14,9 @@ const app=express();
 ////////////////////////////////////
 
 
-
+app.get("/api/v1/unequality-stats/docs", (request, response) => {
+	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
+});
 
 const port= process.env.PORT || 8080;
 app.use(bodyParser.json());
