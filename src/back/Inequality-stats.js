@@ -88,7 +88,7 @@ module.exports.register = (app) => {
 	app.get(BASE_API_PATH  + "/loadInitialData", (req, res) => {
 		if (inequalitystats.length == 0) {
             try {
-            let rawdata = fs.readFileSync('./inequality-stats/inequality-stats.json');
+            let rawdata = fs.readFileSync('./src/back/inequality-stats.json');
             inequalitystats = JSON.parse(rawdata);
             db.insert(inequalitystats);
             } catch {
