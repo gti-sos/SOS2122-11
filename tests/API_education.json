@@ -1,0 +1,779 @@
+{
+	"info": {
+		"_postman_id": "30a970fc-64d7-427a-bcca-272d0e13f801",
+		"name": "API Doc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET vacio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/loadInitialData",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conjunto de datos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Recurso por país",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Object\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(false);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/pakistan/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"pakistan",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Conjunto de recursos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        country:\"filipinas\",\r\n        year:2018,\r\n        dropCoefficients:1,\r\n        completionCoefficients:85.69,\r\n        gobermentExpenditure:6.08\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conjunto de datos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Conjunto de recursos (Fallo)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        country:\"filipinas\",\r\n        year:2018,\r\n        dropCoefficients:1,\r\n        completionCoefficients:85.69,\r\n        gobermentExpenditure:6.08\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Conjunto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET vacio Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET loadInitialData Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/loadInitialData",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Recurso concreto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conjunto de datos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Recurso concreto (Fallo)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/education-stats/loadInitialData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conjunto de datos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Coleccion (Fallo)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"iraq\",\r\n    \"year\": 2018,\r\n    \"dropCoefficients\": 43,\r\n    \"completionCoefficients\": 32.45,\r\n    \"gobermentExpenditure\": 2.12\r\n},",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conjunto de datos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Conjunto Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "localhost:8085",
+			"type": "string"
+		}
+	]
+}

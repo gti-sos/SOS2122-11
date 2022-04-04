@@ -57,7 +57,7 @@ module.exports.register = (app, db) => {
 	
 	//Redirección a la documentación de la API
 	app.get(BASE_API_URL+"/education-stats/docs",(req,res)=>{
-		res.redirect("https://app.example.io");
+		res.redirect(" ");
 	});
 
 	//Aux methods 
