@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 var serveIndex = require('serve-index');
 const fs = require('fs');
-
+const app=express();
 //Inicializa en otro archivo 
 //const backend = require("./src/back");
 //backend(app);
@@ -17,7 +17,7 @@ app.get("/api/v1/education-stats/docs", (request, response) => {
 	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
 });
 
-const app=express();
+
 
 app.get("/api/v1/unequality-stats/docs", (request, response) => {
 	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 const BASE_API_URL = "/api/v1"; 
 
 const Ineq_api = require("./src/back/Inequality-stats");
-const education_api = requirre("./src/back/eduation-stats");
+const education_api = require("./src/back/education-stats");
 Ineq_api.register(app);
 education_api.register(app);
 

@@ -81,15 +81,34 @@ var inequalitystatsInit = [
 	
 
 var inequalitystats =[];
-
+var inequality_countries=[];
 module.exports.register = (app) => {
 
     //carga inicial de datos
 	app.get(BASE_API_PATH  + "/loadInitialData", (req, res) => {
-		db.remove({}, {multi: true});
-        db.insert(inequalitystatsInit);
-        console.log(`Initial data: <${JSON.stringify(inequalitystatsInit, null, 2)}>`);
-        res.sendStatus(200);
+        
+        //if (inequalitystats.length == 0) {
+        //    try {
+        //    let rawdata = fs.readFileSync('./back/inequality-stats.json');
+        //    inequalitystats = JSON.parse(rawdata);
+        //    db.insert(inequality_countries);
+        //    } catch {
+        //        console.log('Error parsing .json file');
+        //}
+        //    console.log('[!] inequality-stats.json loaded onto inequality_countries');
+        //    console.log(JSON.stringify(inequalitystats, null));
+        //    res.status(200).send("<h3>Successfuly loaded "+ inequalitystats.length + " resources</h3><p>You can head now to /api/v1/inequality-stats to check newly created resources</p>")
+        //} else {
+        //    console.log('[!] GET request to /loadInitialData but resources are already loaded.');
+        //    res.status(400).send("<h1>Resources already loaded. Head back to /api/v1/inequality-stats to check them.</h1>")
+        // }
+
+            db.remove({}, {multi: true});
+            db.insert(inequalitystatsInit);
+            console.log(`Initial data: <${JSON.stringify(inequalitystatsInit, null, 2)}>`);
+            res.sendStatus(200);
+      
+		
 	});
 
     app.get(BASE_API_PATH , (req, res) => {
@@ -196,8 +215,10 @@ app.delete(BASE_API_PATH, (req,res) => {
             res.sendStatus(500);
         }else{
             if(numIneqRemoved==0){
+                
                 res.sendStatus(404);
             }else{
+                
                 console.log("Resources deleted");
                 res.sendStatus(200);
             }

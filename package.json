@@ -11,7 +11,7 @@
     "package.json": "^2.0.1"
   },
   "scripts": {
-    "test": "npx newman run ./tests/backend.json -e ./tests/env/Local.json",
+    "test": "npx newman run ./tests/API-inequality.json ", 
     "start": "node Index.js"
   },
   "repository": {
