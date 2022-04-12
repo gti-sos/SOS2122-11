@@ -1,38 +1,26 @@
 const cool= require("cool-ascii-faces");
 const express = require("express");
 const bodyParser = require("body-parser");
-var serveIndex = require('serve-index');
+//var serveIndex = require('serve-index');
 const fs = require('fs');
 const app=express();
-//Inicializa en otro archivo 
-//const backend = require("./src/back");
-//backend(app);
-////////////////////////////////////
 
-app.get("/api/v1/unequality-stats/docs", (request, response) => {
-	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
-});
-
-app.get("/api/v1/education-stats/docs", (request, response) => {
-	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
-});
-
-
-
-app.get("/api/v1/unequality-stats/docs", (request, response) => {
-	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
-});
-
+///Inicializacion de puerto
 const port= process.env.PORT || 8080;
 app.use(bodyParser.json());
 
-const BASE_API_URL = "/api/v1"; 
+///Inicializacion de Apis
+var inequality_api = require("./src/back/inequality-stats-api");
+inequality_api.register(app);
 
-const Ineq_api = require("./src/back/Inequality-stats");
+///Llamada a backend
+const Ineq_api = require("./src/back/inequality-stats-api");
 const education_api = require("./src/back/education-stats");
 Ineq_api.register(app);
 education_api.register(app);
 
+
+///Metodos get y post no relacionados
 app.use("/",express.static('public'));
 
 app.get("/cool", (req,res)=>{
@@ -58,6 +46,14 @@ function elementExists(obj, obj_t) {
 function isAO(val) {
     return val instanceof Array || val instanceof Object ? true : false;
 }
+
+app.get("/api/v1/inequality-stats/docs", (request, response) => {
+	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
+});
+
+app.get("/api/v1/education-stats/docs", (request, response) => {
+	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
+});
 
 
 
