@@ -1,7 +1,8 @@
 <script lang="ts">
+	
   
 	import Home from "./Home.svelte";
-	import Router from 'svelte-spa-router';
+	import Router from "svelte-spa-router";
 	import InequalityTable from "./inequality/inequalityTable.svelte";
 	import EINEQ from "./inequality/EditInequalityTable.svelte";
 	

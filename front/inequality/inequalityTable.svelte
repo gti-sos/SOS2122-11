@@ -294,41 +294,7 @@
         Loading inequality data...
     {:then inequality_stats}
     
-        {#if errorMSG === 200.1}
-        <UncontrolledAlert  color="success" >
-            Datos cargados con éxito.
-        </UncontrolledAlert>
-	    {/if}
-
-        {#if errorMSG === 200.2}
-        <UncontrolledAlert  color="warning" >
-            Recurso eliminado con éxito.
-        </UncontrolledAlert>
-	    {/if}
-
-        {#if errorMSG === 200.3}
-        <UncontrolledAlert  color="warning" >
-            Elementos borrados con éxito.
-        </UncontrolledAlert>
-	    {/if}
-
-        {#if errorMSG === 201}
-        <UncontrolledAlert  color="success" >
-            Recurso insertado.
-        </UncontrolledAlert>
-	    {/if}
-
-        {#if errorMSG === 404.2}
-        <UncontrolledAlert  color="danger" >
-            La base de datos ya esta vacía.
-        </UncontrolledAlert>
-	    {/if}
-
-        {#if errorMSG === 409}
-        <UncontrolledAlert  color="danger" >
-            Este recurso (País y Año) ya existe.
-        </UncontrolledAlert>
-	    {/if}
+        
 
         <!-- Table -->
 

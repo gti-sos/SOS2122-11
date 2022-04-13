@@ -10,13 +10,12 @@ const port= process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 ///Inicializacion de Apis
+//Inequality stats
 var inequality_api = require("./src/back/inequality-stats-api");
 inequality_api.register(app);
 
-///Llamada a backend
-const Ineq_api = require("./src/back/inequality-stats-api");
+//educations stats
 const education_api = require("./src/back/education-stats");
-Ineq_api.register(app);
 education_api.register(app);
 
 
@@ -47,6 +46,7 @@ function isAO(val) {
     return val instanceof Array || val instanceof Object ? true : false;
 }
 
+//Datos postman
 app.get("/api/v1/inequality-stats/docs", (request, response) => {
 	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
 });

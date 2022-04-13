@@ -6,42 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Get vacio",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
-					"protocol": "https",
-					"host": [
-						"sos2122-11",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"v1",
-						"inequality-stats"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Get load",
 			"event": [
 				{
