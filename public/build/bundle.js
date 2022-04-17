@@ -17056,7 +17056,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file, 17, 0, 368);
+    			add_location(main, file, 17, 0, 357);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17098,7 +17098,7 @@ var app = (function () {
     	validate_slots('App', slots, []);
 
     	const routes = {
-    		"/info": Home,
+    		"/": Home,
     		"/inequality-stats": InequalityTable,
     		"/inequality-stats/:country/:year": EditInequalityTable
     	};
