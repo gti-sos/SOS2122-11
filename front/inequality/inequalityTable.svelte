@@ -4,8 +4,7 @@
 	import Button from "sveltestrap/src/Button.svelte";
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 	import { Form, FormGroup, FormText, Input, Label } from 'sveltestrap';
-    //import UncontrolledAlert  from "sveltestrap" ;
-	
+    import UncontrolledAlert from "sveltestrap/src/UncontrolledAlert.svelte";	
 	
     
     //ALERTAS
@@ -293,8 +292,43 @@
     {#await inequality_stats}
         Loading inequality data...
     {:then inequality_stats}
-    
-        
+            
+
+            {#if errorMSG === 200.1}
+            <UncontrolledAlert  color="success" >
+                Datos cargados con éxito.
+            </UncontrolledAlert>
+            {/if}
+
+            {#if errorMSG === 200.2}
+            <UncontrolledAlert  color="warning" >
+                Recurso eliminado con éxito.
+            </UncontrolledAlert>
+            {/if}
+
+            {#if errorMSG === 200.3}
+            <UncontrolledAlert  color="warning" >
+                Elementos borrados con éxito.
+            </UncontrolledAlert>
+            {/if}
+
+            {#if errorMSG === 201}
+            <UncontrolledAlert  color="success" >
+                Recurso instertado con éxito.
+            </UncontrolledAlert>
+            {/if}
+
+            {#if errorMSG === 404.2}
+            <UncontrolledAlert  color="danger" >
+                La base de datos ya esta vacía.
+            </UncontrolledAlert>
+            {/if}
+
+            {#if errorMSG === 409}
+            <UncontrolledAlert  color="danger" >
+                Este recurso (País y Año) ya existe.
+            </UncontrolledAlert>
+            {/if}
 
         <!-- Table -->
 
@@ -303,9 +337,9 @@
                 <tr>
                     <th>País</th>
                     <th>Año</th>
-                    <th>Porcentaje  </th>
-                    <th>Porcentaje </th>
-                    <th>Porcentaje</th>
+                    <th>Coeficiente de desigualdad  </th>
+                    <th>Desigualdad de educacion </th>
+                    <th>Desigualdad en esperanza de vida</th>
                     <th>Acciones</th> 
                 </tr>
             </thead>
