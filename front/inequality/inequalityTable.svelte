@@ -98,6 +98,7 @@
 		if(typeof lifes=='undefined'){
 			lifes="";
 		}
+        /// window.alert(Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&coefficients="+coefficients+"&educations="+educations+"&lifes="+lifes);
 		const res = await fetch("/api/v1/inequality-stats?country="+Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&coefficients="+coefficients+"&educations="+educations+"&lifes="+lifes)
 		if (res.ok){
 			const json = await res.json();

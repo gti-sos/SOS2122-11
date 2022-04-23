@@ -10,6 +10,7 @@
 	
 	const routes = {
 		"/": Home,
+		"/info": Home,
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
 
