@@ -5,6 +5,8 @@
 	import Router from 'svelte-spa-router';
 	import InequalityTable from './inequality/inequalityTable.svelte';
 	import EINEQ from './inequality/EditInequalityTable.svelte';
+	import EducationTable from './education-stats/EducationTable.svelte';
+	impot EditEducationTable from './education-stats/EditEducationTable.svelte';
 	
 
 	
@@ -13,7 +15,8 @@
 		"/info": Home,
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
-
+		"/education-stats/": EducationTable,
+		"/education-stats/:county/:year": EditEducationTable,
 		};
 </script>
 <main>
