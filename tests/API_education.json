@@ -1,29 +1,10 @@
 {
 	"info": {
 		"_postman_id": "30a970fc-64d7-427a-bcca-272d0e13f801",
-		"name": "API Doc",
+		"name": "Education API Doc",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "GET vacio",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
-					"host": [
-						"{{SERVER}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"education-stats"
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "GET loadInitialData",
 			"event": [
@@ -125,14 +106,9 @@
 							"\r",
 							"pm.test(\"Response is an Object\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(Array.isArray(jsonData)).to.eql(false);\r",
+							"    pm.expect(typeof jsonData == 'object').to.eql(true);\r",
 							"});\r",
-							"\r",
-							"\r",
-							"pm.test(\"Response has data\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -142,7 +118,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/pakistan/2018",
+					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
 					"host": [
 						"{{SERVER}}"
 					],
@@ -150,7 +126,43 @@
 						"api",
 						"v1",
 						"education-stats",
-						"pakistan",
+						"iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Recurso inexistente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/españa/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"españa",
 						"2018"
 					]
 				}
@@ -164,17 +176,10 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
 							"});\r",
-							"pm.test(\"Successful POST request\", function () {\r",
-							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response has data\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -185,7 +190,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        country:\"filipinas\",\r\n        year:2018,\r\n        dropCoefficients:1,\r\n        completionCoefficients:85.69,\r\n        gobermentExpenditure:6.08\r\n    }",
+					"raw": "{\r\n    \"country\": \"filipinas\",\r\n    \"year\": \"2018\",\r\n    \"dropCoefficients\": \"1\",\r\n    \"completionCoefficients\": \"85.69\",\r\n    \"gobermentExpenditure\": \"6.08\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -201,6 +206,50 @@
 						"api",
 						"v1",
 						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Recurso concreto (Fallo)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"pakistan\",\r\n\"year\": \"2018\",\r\n\"dropCoefficients\": \"27\",\r\n\"completionCoefficients\": \"49.54\",\r\n\"gobermentExpenditure\": \"2.7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/pakistan/2018",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"pakistan",
+						"2018"
 					]
 				}
 			},
@@ -251,22 +300,56 @@
 			"response": []
 		},
 		{
-			"name": "POST Conjunto de recursos (Fallo)",
+			"name": "POST Conjunto de recursos (Fallo, elemento ya existe)",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Status code is 409\", function () {\r",
+							"    pm.response.to.have.status(409);\r",
 							"});\r",
-							"pm.test(\"Successful POST request\", function () {\r",
-							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response has data\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.be.at.least(1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"country\":\"filipinas\",\r\n        \"year\":\"2018\",\r\n        \"dropCoefficients\":\"1\",\r\n        \"completionCoefficients\":\"15.69\",\r\n        \"gobermentExpenditure\":\"6.08\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Conjunto de recursos (Fallo, Campos erroneos)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -278,7 +361,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        country:\"filipinas\",\r\n        year:2018,\r\n        dropCoefficients:1,\r\n        completionCoefficients:85.69,\r\n        gobermentExpenditure:6.08\r\n    }",
+					"raw": "{\r\n        \"country\":\"filipinas\",\r\n        \"dropCoefficients\":1,\r\n        \"completionCoefficients\":85.69,\r\n        \"gobermentExpenditure\":6.08\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -332,7 +415,52 @@
 			"response": []
 		},
 		{
-			"name": "GET vacio Copy",
+			"name": "DELETE Conjunto Vacío",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -351,7 +479,7 @@
 			"response": []
 		},
 		{
-			"name": "GET loadInitialData Copy",
+			"name": "GET loadInitialData",
 			"event": [
 				{
 					"listen": "test",
@@ -479,8 +607,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -603,8 +731,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 400\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -630,14 +758,14 @@
 			"response": []
 		},
 		{
-			"name": "PUT Recurso",
+			"name": "PUT Recurso inexistente (Fallo)",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -649,7 +777,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"country\": \"iraq\",\r\n    \"year\": 2018,\r\n    \"dropCoefficients\": 43,\r\n    \"completionCoefficients\": 32.45,\r\n    \"gobermentExpenditure\": 2.12\r\n},",
+					"raw": "{\r\n    \"country\": \"españa\",\r\n    \"year\": \"2018\",\r\n    \"dropCoefficients\": \"27\",\r\n    \"completionCoefficients\": \"63.19\",\r\n    \"gobermentExpenditure\": \"5.3\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -657,7 +785,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"raw": "{{SERVER}}/api/v1/education-stats/españa/2018",
 					"host": [
 						"{{SERVER}}"
 					],
@@ -665,7 +793,7 @@
 						"api",
 						"v1",
 						"education-stats",
-						"iraq",
+						"españa",
 						"2018"
 					]
 				}
@@ -711,6 +839,92 @@
 						"api",
 						"v1",
 						"education-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"india\",\r\n    \"year\": \"2015\",\r\n    \"dropCoefficients\": \"20\",\r\n    \"completionCoefficients\": \"78.4\",\r\n    \"gobermentExpenditure\": \"4.10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/india/2015",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"india",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Recurso (Fallo, país distinto a la  url",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"honduras\",\r\n    \"year\": \"2015\",\r\n    \"dropCoefficients\": \"20\",\r\n    \"completionCoefficients\": \"78.4\",\r\n    \"gobermentExpenditure\": \"4.10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/education-stats/india/2015",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"education-stats",
+						"india",
+						"2015"
 					]
 				}
 			},
@@ -772,7 +986,7 @@
 	"variable": [
 		{
 			"key": "SERVER",
-			"value": "localhost:8085",
+			"value": "https://sos2122-11.herokuapp.com",
 			"type": "string"
 		}
 	]
