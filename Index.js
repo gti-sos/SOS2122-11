@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 //Inicializacion de Apis
 //Inequality stats
-var inequality_api = require("./src/back/inequality-stats");
+var inequality_api = require("./src/back/inequality-stats-api");
 inequality_api.register(app);
 
 //Education stats

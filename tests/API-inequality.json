@@ -1,0 +1,708 @@
+{
+	"info": {
+		"_postman_id": "4b51e5b5-d89f-4940-a307-87e682571c05",
+		"name": "SOS2122-11 Inequality stats Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get load",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get lleno",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brasil",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(false);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/Brasil/2018",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"Brasil",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Funciona",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Japon\",\r\n    \"year\": \"2010\",\r\n    \"coefficients\": \"30.4\",\r\n    \"educations\": \"44.8\",\r\n    \"lifes\": \"35.7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get muestra",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post fallo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\ncountry: \"Japon\",\r\nyear: 2010,\r\ncoefficients: 30.4,\r\neducations: 44.8,\r\nlifes: 35.7\r\n}"
+				},
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del todo Funciona",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get load",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del Iraq",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/Iraq/2018",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"Iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sin Iraq",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del iraq fallo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/iraq/2018",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get load",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put inequality-stats fallo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put inequality-stats Correcto iraq",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Iraq\",\r\n    \"year\": \"2018\",\r\n    \"coefficients\": \"30.4\",\r\n    \"educations\": \"44.8\",\r\n    \"lifes\": \"35.7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats/Iraq/2018",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats",
+						"Iraq",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get inequality-stats Iraq actualizado",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del final",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2122-11.herokuapp.com/api/v1/inequality-stats",
+					"protocol": "https",
+					"host": [
+						"sos2122-11",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inequality-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

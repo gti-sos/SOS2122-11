@@ -37,103 +37,119 @@ function isAO(val) {
 var inequalitystatsInit = [
     {
         country:"Iraq",
-        year:2018,
-        coefficients:19.4,
-        educations:29.7,
-        lifes:15.9
+        year:"2018",
+        coefficients:"19.4",
+        educations:"29.7",
+        lifes:"15.9"
     },
     {
         country:"Afghanistan",
-        year:2015,
-        coefficients:30.4,
-        educations:44.8,
-        lifes:35.7
+        year:"2015",
+        coefficients:"30.4",
+        educations:"44.8",
+        lifes:"35.7"
     },
     {
         country:"Pakistan",
-        year:2018,
-        coefficients:29.6,
-        educations:43.5,
-        lifes:29.9
+        year:"2018",
+        coefficients:"29.6",
+        educations:"43.5",
+        lifes:"29.9"
     },
     {
         country:"India",
-        year:2015,
-        coefficients:26.5,
-        educations:39.4,
-        lifes:24
+        year:"2015",
+        coefficients:"26.5",
+        educations:"39.4",
+        lifes:"24"
     },
     {
         country:"Honduras",
-        year:2018,
-        coefficients:24.9,
-        educations:23,
-        lifes:13.3
+        year:"2018",
+        coefficients:"24.9",
+        educations:"23",
+        lifes:"13.3"
     },
     {
         country:"Brasil",
-        year:2018,
-        coefficients:23.6,
-        educations:22,
-        lifes:10.9
+        year:"2018",
+        coefficients:"23.6",
+        educations:"22",
+        lifes:"10.9"
     }];
 
 	
 
 var inequalitystats =[];
-
+var inequality_countries=[];
 module.exports.register = (app) => {
 
     //carga inicial de datos
 	app.get(BASE_API_PATH  + "/loadInitialData", (req, res) => {
-		db.remove({}, {multi: true});
-        db.insert(inequalitystatsInit);
-        console.log(`Initial data: <${JSON.stringify(inequalitystatsInit, null, 2)}>`);
-        res.sendStatus(200);
+        
+        //if (inequalitystats.length == 0) {
+        //    try {
+        //    let rawdata = fs.readFileSync('./back/inequality-stats.json');
+        //    inequalitystats = JSON.parse(rawdata);
+        //    db.insert(inequality_countries);
+        //    } catch {
+        //        console.log('Error parsing .json file');
+        //}
+        //    console.log('[!] inequality-stats.json loaded onto inequality_countries');
+        //    console.log(JSON.stringify(inequalitystats, null));
+        //    res.status(200).send("<h3>Successfuly loaded "+ inequalitystats.length + " resources</h3><p>You can head now to /api/v1/inequality-stats to check newly created resources</p>")
+        //} else {
+        //    console.log('[!] GET request to /loadInitialData but resources are already loaded.');
+        //    res.status(400).send("<h1>Resources already loaded. Head back to /api/v1/inequality-stats to check them.</h1>")
+        // }
+
+            db.remove({}, {multi: true});
+            db.insert(inequalitystatsInit);
+            console.log(`Initial data: <${JSON.stringify(inequalitystatsInit, null, 2)}>`);
+            res.sendStatus(200);
+      
+		
 	});
 
     app.get(BASE_API_PATH , (req, res) => {
-        var limit = parseInt(req.query.limit);
-        var offset = parseInt(req.query.offset);
+        var offset= parseInt(req.query.offset);
+        var limit=parseInt(req.query.limit);
         var search = {};
-    
-        if(req.query.country) 
-            search["country"] = req.query.country;
-        if(req.query.year) 
-            search["year"] = parseInt(req.query.year);
-        if(req.query.coefficients) 
-            search["coefficients"] = req.query.coefficients;
-        if(req.query.educations) 
-            search["educations"] = req.query.educations;
-        if(req.query.lifes) 
-            search["lifes"] = req.query.lifes;
-        
-    
-        db.find(search).skip(offset).limit(limit).exec((err,data)=>{
-            if(err){
-                console.error("ERROR accessing DB in GET");
-                res.sendStatus(500);
-            }else {
-                if (data.length != 0){
-                    data.forEach((a)=>{delete a._id; }); 
-                    console.log(search)
-                    return res.send(JSON.stringify(data,null,2));
-                    return res.sendStatus(200);
+
+        if (req.query.country) {search["country"] = req.query.country}
+        if (req.query.year) {
+          search['year'] = (req.query.year);
+        }else if(req.query.from || req.query.to) {
+          search['year'] = { $gte:(req.query.from), $lte:(req.query.to) };
+        }
+        if (req.query.coefficients) {search["coefficients"] = req.query.coefficients}
+        if (req.query.educations) {search["educations"] = req.query.educations}
+        if (req.query.lifes) {search["lifes"] = req.query.lifes}
+        if (db.count({}) == 0) {
+            console.log('[!] Se ha hecho una petición a los recursos pero no han sido cargados.');
+            return res.status(404).send("<p>No se han cargado los recursos. Para ello añade en la dirección /loadInitialData</p>");
+        } else {
+            db.find(search).skip(offset).limit(limit).exec((err, dbdata) => {
+                if (err) {
+                    console.log("[!] Error al acceder a inequality-stats.db " + err);
+                    return res.status(500).send("<h1>Error al acceder a la base de datos</h1>");
                 } else {
-                    console.log(search)
-                    console.log("No data found");
-                    return res.sendStatus(404);
+                    if (dbdata == 0) {
+                        console.log("[!] La base de datos está vacia");
+                        return res.status(404).send("<h1>No se han cargado los recursos. Para ello añade en la dirección /loadInitialData</h1>");
+                    } else {
+                        dbdata.forEach((data) =>{ delete data._id});
+                        return res.status(200).send(JSON.stringify(dbdata,null, 2));
+                    }
                 }
-                
-    
-            }
-        });
+            })
+        }
         });
 
  //GET a un recurso -- CODIGO NUEVO
  app.get(BASE_API_PATH + "/:country/:year", (req, res) => {
     var countryToGet = req.params.country;
-    var yearToGet = parseInt(req.params.year);
+    var yearToGet = req.params.year;
    
     
     
@@ -196,8 +212,10 @@ app.delete(BASE_API_PATH, (req,res) => {
             res.sendStatus(500);
         }else{
             if(numIneqRemoved==0){
+                
                 res.sendStatus(404);
             }else{
+                
                 console.log("Resources deleted");
                 res.sendStatus(200);
             }
@@ -210,7 +228,7 @@ app.delete(BASE_API_PATH + "/:country/:year", (req,res) => {
 
 			
     var country = req.params.country;
-    var year = parseInt(req.params.year);
+    var year = req.params.year;
     
     db.remove({ country: country, year: year },{},(err, data)=>{
         if(err){
@@ -236,7 +254,7 @@ app.put(BASE_API_PATH, (req,res) => {
 app.put(BASE_API_PATH + "/:country/:year", (req, res) => {
 	
     var country = req.params.country;
-    var year = parseInt(req.params.year);
+    var year = req.params.year;
     var updateineq = req.body;
     var query = {"country":country, "year":year};
     console.log(req.body);
