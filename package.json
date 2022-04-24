@@ -28,7 +28,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "npx newman run ./tests/API-inequality.json ",
+    "test": "npm run inequality-test && npm run education-test",
+    "inequality-test": "npx newman run ./tests/API-inequality.json ",
     "education-test": "npx newman run ./tests/API_education.json -e ./tests/env/education_variables.json",
     "start": "node Index.js"
   },

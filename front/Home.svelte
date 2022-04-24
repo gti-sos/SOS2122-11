@@ -74,6 +74,28 @@
             <a href="https://github.com/Jackman97">Antonio Maiquez</a>
             </CardFooter>
         </Card>
+
+        <Card class="mb-3">
+          <CardHeader>
+            <CardTitle><h5>Estadísticas de educación</h5></CardTitle>
+          </CardHeader>
+          <CardBody>
+            <CardSubtitle />
+            <CardText>Recogidas por la Unesco</CardText>
+            <a href="https://sos2122-11.herokuapp.com/api/v1/education-stats">
+              <Button color="primary">API</Button></a>
+            <a href="/#/education-stats">
+              <Button color="primary">Interfaz</Button>
+            </a>
+            <a href="https://documenter.getpostman.com/view/19481545/UyrBhvbJ"
+              ><Button color="info">Documentación Backend en Postman</Button></a>
+            
+          </CardBody>
+          <CardFooter
+            >desarrollado por 
+            <a href="https://github.com/dasougon7">David Sousa</a>
+            </CardFooter>
+        </Card>
       </Col>
     </Container>
   </main>

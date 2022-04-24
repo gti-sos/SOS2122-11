@@ -3,7 +3,7 @@
 	"values": [
 		{
 			"key": "SERVER",
-			"value": "https://sos2122-11.herokuapp.com",
+			"value": "localhost:8080",
 			"type": "default",
 			"enabled": true
 		}
