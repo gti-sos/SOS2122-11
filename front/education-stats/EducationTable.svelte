@@ -48,7 +48,7 @@
             education_stats = json;
             console.log("Received " + education_stats.length + " education data.");
         } else {
-            errorMSG= res.status;// + ": " + res.statusText;
+            errorMSG= res.status;
             console.log("ERROR!");
         }
     }
@@ -64,13 +64,9 @@
             const json = await res.json();
             education_stats = json;
             console.log("Received " + education_stats.length + " education data.");
-            //color = "success";
-            //errorMSG = "Datos cargados correctamente";
             errorMSG = 200.1;
         } 
         else {
-            //color = "danger";
-            //errorMSG= res.status + ": " + res.statusText;
             errorMSG = 404;
             console.log("ERROR!");
         }
@@ -97,7 +93,7 @@
 		if(typeof gobermentExpenditure=='undefined'){
 			gobermentExpenditure="";
 		}
-        /// window.alert(Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&dropCoefficients="+dropCoefficients+"&completionCoefficients="+completionCoefficients+"&gobermentExpenditure="+gobermentExpenditure);
+        
 		const res = await fetch("/api/v1/education-stats?country="+Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&dropCoefficients="+dropCoefficients+"&completionCoefficients="+completionCoefficients+"&gobermentExpenditure="+gobermentExpenditure);
 		if (res.ok){
 			const json = await res.json();
@@ -141,7 +137,7 @@
             console.log("ERROR!");
         }
     }
-    //getPreviewPage    
+    
     async function getPreviewPage() {
         console.log(totaldata);
         if (page-10 > 1) {
