@@ -51,7 +51,7 @@ app.get("/api/v1/inequality-stats/docs", (request, response) => {
 	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
 });
 
-app.get("/api/v1/education-stats/docs", (request, response) => {
+app.get("/api/v2/education-stats/docs", (request, response) => {
 	response.redirect(301, 'https://documenter.getpostman.com/view/19481545/UyrBhvbJ');
 });
 

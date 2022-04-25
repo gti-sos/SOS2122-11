@@ -39,7 +39,7 @@
   
     <Container>
       <Col>
-        <a href="http://github.com/gti-sos/SOS2122-1"
+        <a href="http://github.com/gti-sos/SOS2122-11 "
           ><b>Repository: </b>http://github.com/gti-sos/SOS2122-11</a
         >
       </Col>
@@ -55,7 +55,7 @@
       <Col xs="auto">
         <Card class="mb-3">
           <CardHeader>
-            <CardTitle><h5>Estadísticas de desigualdad</h5></CardTitle>
+            <CardTitle><h3>Estadísticas de desigualdad</h3></CardTitle>
           </CardHeader>
           <CardBody>
             <CardSubtitle />
@@ -77,12 +77,12 @@
 
         <Card class="mb-3">
           <CardHeader>
-            <CardTitle><h5>Estadísticas de educación</h5></CardTitle>
+            <CardTitle><h3>Estadísticas de educación</h3></CardTitle>
           </CardHeader>
           <CardBody>
             <CardSubtitle />
             <CardText>Recogidas por la Unesco</CardText>
-            <a href="https://sos2122-11.herokuapp.com/api/v1/education-stats">
+            <a href="https://sos2122-11.herokuapp.com/api/v2/education-stats">
               <Button color="primary">API</Button></a>
             <a href="/#/education-stats">
               <Button color="primary">Interfaz</Button>
