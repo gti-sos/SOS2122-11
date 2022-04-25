@@ -35,13 +35,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/loadInitialData",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/loadInitialData",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"loadInitialData"
 					]
@@ -80,13 +78,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -118,13 +114,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/iraq/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"iraq",
 						"2018"
@@ -154,13 +148,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/españa/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/españa/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"españa",
 						"2018"
@@ -198,13 +190,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -240,13 +230,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/pakistan/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/pakistan/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"pakistan",
 						"2018"
@@ -286,13 +274,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -328,13 +314,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -369,13 +353,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -401,13 +383,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -433,13 +413,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -465,13 +443,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -508,13 +484,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/loadInitialData",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/loadInitialData",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"loadInitialData"
 					]
@@ -541,13 +515,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/iraq/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"iraq",
 						"2018"
@@ -587,13 +559,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -619,13 +589,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/iraq/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/iraq/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"iraq",
 						"2018"
@@ -664,15 +632,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/education-stats/loadInitialData",
-					"protocol": "http",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/loadInitialData",
 					"host": [
-						"localhost"
+						"{{SERVER}}{{VERSION}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"loadInitialData"
 					]
@@ -711,13 +675,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -743,13 +705,11 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						""
 					]
@@ -785,13 +745,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/españa/2018",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/españa/2018",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"españa",
 						"2018"
@@ -831,13 +789,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}
@@ -872,13 +828,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/india/2015",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/india/2015",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"india",
 						"2015"
@@ -915,13 +869,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats/india/2015",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats/india/2015",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats",
 						"india",
 						"2015"
@@ -949,13 +901,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}/api/v1/education-stats",
+					"raw": "{{SERVER}}{{VERSION}}/education-stats",
 					"host": [
-						"{{SERVER}}"
+						"{{SERVER}}{{VERSION}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"education-stats"
 					]
 				}

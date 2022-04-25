@@ -1,15 +1,21 @@
 {
-	"id": "66b843f2-9e43-400b-84e3-f02a295e87fc",
+	"id": "0a8c04a3-eb39-423a-bee5-6a4c1633e3be",
+	"name": "Heroku",
 	"values": [
 		{
 			"key": "SERVER",
 			"value": "https://sos2122-11.herokuapp.com",
 			"type": "default",
 			"enabled": true
+		},
+		{
+			"key": "VERSION",
+			"value": "/api/v2",
+			"type": "default",
+			"enabled": true
 		}
 	],
-	"name": "Globals",
-	"_postman_variable_scope": "globals",
-	"_postman_exported_at": "2022-04-24T18:09:21.081Z",
-	"_postman_exported_using": "Postman/9.15.10"
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-04-25T07:30:44.774Z",
+	"_postman_exported_using": "Postman/9.15.13"
 }
