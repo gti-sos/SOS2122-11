@@ -29,7 +29,7 @@ async function getPais(){
         console.log("Received education_stat.");
     }else if(res.status==404){      
         erroMsg="No existe un recurso llamado "+ params.country+" en la tabla";
-        console.log("ERROR" + erroMsg);
+        console.log("ERROR " + erroMsg);
     }
 }
 async function actualizaPais(){

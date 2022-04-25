@@ -182,7 +182,6 @@
              }).then(function (res) {
                  if(res.status == 201){
                     getData();
-                     //window.alert("Se introdujo el dato");
                      console.log("Data introduced");
                      errorMSG = 201;
                  }
@@ -192,7 +191,6 @@
                      errorMSG = 400;
                  }
                  else if(res.status == 409){
-                     //window.alert("Ya existe ese recurso en la base de datos");
                      console.log("ERROR There is already a data with that country and year in the database");
                      errorMSG = 409;
                  }
