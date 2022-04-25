@@ -16,7 +16,7 @@
 	onMount(getPais);
 async function getPais(){
     console.log("Fetching country....");
-    const res = await fetch("/api/v1/education-stats/" + params.country + "/" + params.year);
+    const res = await fetch("/api/v1/education-stats/" + req.params.country + "/" + req.params.year);
     if(res.ok){
         console.log("Ok:");
         const json = await res.json();
@@ -28,7 +28,7 @@ async function getPais(){
         updatedGobermentExpenditure = education_stat.gobermentExpenditure;
         console.log("Received education_stat.");
     }else if(res.status==404){      
-        erroMsg="No existe un recurso llamado "+params.country+" en la tabla";
+        erroMsg="No existe un recurso llamado "+ req.params.country+" en la tabla";
         console.log("ERROR" + erroMsg);
     }
 }
