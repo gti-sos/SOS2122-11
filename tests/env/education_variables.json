@@ -3,7 +3,7 @@
 	"values": [
 		{
 			"key": "SERVER",
-			"value": "localhost:8080",
+			"value": "https://sos2122-11.herokuapp.com/api/v1/eduaction-stats",
 			"type": "default",
 			"enabled": true
 		}
