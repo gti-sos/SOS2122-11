@@ -6,7 +6,7 @@
 	import InequalityTable from './inequality/inequalityTable.svelte';
 	import EINEQ from './inequality/EditInequalityTable.svelte';
 	import EducationTable from './education-stats/EducationTable.svelte';
-	impot EditEducationTable from './education-stats/EditEducationTable.svelte';
+	import EditEducationTable from './education-stats/EditEducationTable.svelte';
 	
 
 	
