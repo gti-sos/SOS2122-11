@@ -56,7 +56,7 @@
     //GET INITIALDATA
     async function loadInitialData() {
  
-        console.log("Fetching inequality data...");
+        console.log("Fetching education data...");
         await fetch("/api/v1/education-stats/loadInitialData");
         const res = await fetch("/api/v1/education-stats?limit=10"+"&offset="+page);
         if (res.ok) {
