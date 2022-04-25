@@ -41,7 +41,7 @@
     async function getData() {
  
         console.log("Fetching education Data...");
-        const res = await fetch("/api/v1/education-stats?limit=10"+"&offset="+page);
+        const res = await fetch("/api/v2/education-stats?limit=10"+"&offset="+page);
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -57,8 +57,8 @@
     async function loadInitialData() {
  
         console.log("Fetching education data...");
-        await fetch("/api/v1/education-stats/loadInitialData");
-        const res = await fetch("/api/v1/education-stats?limit=10"+"&offset="+page);
+        await fetch("/api/v2/education-stats/loadInitialData");
+        const res = await fetch("/api/v2/education-stats?limit=10"+"&offset="+page);
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -94,7 +94,7 @@
 			gobermentExpenditure="";
 		}
         
-		const res = await fetch("/api/v1/education-stats?country="+Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&dropCoefficients="+dropCoefficients+"&completionCoefficients="+completionCoefficients+"&gobermentExpenditure="+gobermentExpenditure);
+		const res = await fetch("/api/v2/education-stats?country="+Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&dropCoefficients="+dropCoefficients+"&completionCoefficients="+completionCoefficients+"&gobermentExpenditure="+gobermentExpenditure);
 		if (res.ok){
 			const json = await res.json();
 			education_stats = json;
@@ -120,7 +120,7 @@
         
         visible = true;
         console.log("Charging page... Listing since: "+page);
-        const res = await fetch("/api/v1/education-stats?limit=10&offset="+(-1+page));
+        const res = await fetch("/api/v2/education-stats?limit=10&offset="+(-1+page));
         color = "success";
         errorMSG= (page+5 > totaldata) ? "Mostrando elementos "+(page)+"-"+totaldata : "Mostrando elementos "+(page)+"-"+(page+9);
         if (totaldata == 0){
@@ -145,7 +145,7 @@
         } else page = 1
         visible = true;
         console.log("Charging page... Listing since: "+page);
-        const res = await fetch("/api/v1/education-stats?limit=10&offset="+(-1+page));
+        const res = await fetch("/api/v2/education-stats?limit=10&offset="+(-1+page));
         color = "success";
         errorMSG= (page+5 > totaldata) ? "Mostrando elementos "+(page)+"-"+totaldata : "Mostrando elementos "+(page)+"-"+(page+9);
         if (totaldata == 0){
@@ -173,7 +173,7 @@
              alert("Debes insertar el nombre del país y el año.");
          }
          else{
-             const res = await fetch("/api/v1/education-stats",{
+             const res = await fetch("/api/v2/education-stats",{
              method:"POST",
              body:JSON.stringify(data),
              headers:{
@@ -199,7 +199,7 @@
      }
     //DELETE SPECIFIC
     async function deleteData(name, year) {
-        const res = await fetch("/api/v1/education-stats/" + name + "/" + year, {
+        const res = await fetch("/api/v2/education-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res) {
             visible = true;
@@ -222,7 +222,7 @@
     async function deleteALL() {
 		console.log("Deleting inequality data...");
 			console.log("Deleting all unemployment data...");
-			const res = await fetch("/api/v1/education-stats/", {
+			const res = await fetch("/api/v2/education-stats/", {
 				method: "DELETE"
 			}).then(function (res) {
 				if(res.ok){
