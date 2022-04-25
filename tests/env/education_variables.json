@@ -3,7 +3,7 @@
 	"values": [
 		{
 			"key": "SERVER",
-			"value": "https://sos2122-11.herokuapp.com/api/v1/eduaction-stats",
+			"value": "https://sos2122-11.herokuapp.com",
 			"type": "default",
 			"enabled": true
 		}
