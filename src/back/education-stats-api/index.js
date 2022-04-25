@@ -1,5 +1,5 @@
 //############## Api education-stats ###########################
-const BASE_API_URL = "/api/v1/education-stats";
+const BASE_API_URL = "/api/v2/education-stats";
 const fs = require('fs');
 var path = require('path');
 var DataStore = require("nedb");

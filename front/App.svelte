@@ -16,7 +16,7 @@
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
 		"/education-stats/": EducationTable,
-		"/education-stats/:county/:year": EditEducationTable,
+		"/education-stats/:country/:year": EditEducationTable,
 		};
 </script>
 <main>
