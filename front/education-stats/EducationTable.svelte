@@ -167,7 +167,7 @@
     
     async function insertData(){
 		 
-         console.log("Inserting inequality data...");
+         console.log("Inserting education data...");
          //Comprobamos que el año y la fecha no estén vacíos, el string vacio no es null
          if (data.country == "" || data.country == null || data.year == "" || data.year == null) {
              alert("Debes insertar el nombre del país y el año.");
