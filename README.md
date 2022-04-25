@@ -8,5 +8,5 @@
 - **URL**: [http://sos2122-11.herokuapp.com](http://sos2122-11.herokuapp.com)
 -  **APIs**:
     - [https://sos2122-11.herokuapp.com/api/v1/inequality-stats/docs](https://sos2122-11.herokuapp.com/api/v1/inequality-stats/docs) (developed by [Antonio Maiquez Marin](https://github.com/Jackman97))
-    - [https://sos2122-27.herokuapp.com/api/v1/education-stats](https://sos2122-27.herokuapp.com/api/v1/education-stats) (developed by [David Sousa Gonzalez](https://github.com/dasougon7))
+    - [https://sos2122-27.herokuapp.com/api/v2/education-stats](https://sos2122-11.herokuapp.com/api/v2/education-stats) (developed by [David Sousa Gonzalez](https://github.com/dasougon7))
     - [https://sos2122-11.herokuapp.com/api/v1/public-debt-stats/docs](https://sos2122-11.herokuapp.com/api/v1/public-debt-stats/docs) (developed by [Ignacio Mauri Caceres - ](https://github.com/nachomc01))
