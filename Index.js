@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 //Inequality stats
 var inequality_api = require("./src/back/inequality-stats-api");
 inequality_api.register(app);
+var inequality_api = require("./src/back/inequality-stats-api/v2");
+inequality_api.register(app);
 
 //Education stats
 var education_api = require("./src/back/education-stats-api/");

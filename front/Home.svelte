@@ -60,7 +60,7 @@
           <CardBody>
             <CardSubtitle />
             <CardText>Recogidas por la UNDP</CardText>
-            <a href="https://sos2122-11.herokuapp.com/api/v1/inequality-stats">
+            <a href="https://sos2122-11.herokuapp.com/api/v2/inequality-stats">
               <Button color="primary">API</Button></a>
             <a href="/#/inequality-stats">
               <Button color="primary">Interfaz</Button>
