@@ -7,7 +7,8 @@
 	import EINEQ from './inequality/EditInequalityTable.svelte';
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
-	
+	import InequalityHighCharts from "./inequality/analytics/inequalityHighChart.svelte";
+
 
 	
 	const routes = {
@@ -15,6 +16,7 @@
 		"/info": Home,
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
+		"/inequality-stats/inequalityHighCharts":InequalityHighCharts,
 		"/education-stats/": EducationTable,
 		"/education-stats/:country/:year": EditEducationTable,
 		};
