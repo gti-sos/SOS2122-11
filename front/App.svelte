@@ -7,7 +7,7 @@
 	import EINEQ from './inequality/EditInequalityTable.svelte';
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
-	import InequalityHighCharts from "./inequality/analytics/inequalityHighChart.svelte";
+	import InequalityHighCharts from './inequality/analytics/InequalityHighChart.svelte';
 
 
 	
