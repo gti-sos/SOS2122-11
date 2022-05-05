@@ -16,9 +16,6 @@
         if (res.ok) {
           inequalityData.forEach(stat => {
             inequalityChartCountryYear.push(stat.country+"-"+stat.year);
-            //unemploymentChartKnoperc.push(stat["knoperc"]);
-            //unemploymentChartIntperc.push(stat["intperc"]);
-            //unemploymentChartGfperc.push(stat["gfperc"]);  
             inequalityChartCoefficients.push(parseFloat(stat.coefficients));
             inequalityCharteducations.push(parseFloat(stat.educations));
             inequalityChartlifes.push(parseFloat(stat.lifes));

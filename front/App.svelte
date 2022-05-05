@@ -8,6 +8,7 @@
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
 	import InequalityHighCharts from './inequality/analytics/InequalityHighChart.svelte';
+	import InequalityPlotlyCharts from './inequality/analytics/InequalityPlotlyChart.svelte';
 
 
 	
@@ -17,6 +18,7 @@
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
 		"/inequality-stats/inequalityHighCharts":InequalityHighCharts,
+		"/inequality-stats/inequalityPlotlyCharts":InequalityPlotlyCharts,
 		"/education-stats/": EducationTable,
 		"/education-stats/:country/:year": EditEducationTable,
 		};
