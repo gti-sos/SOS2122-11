@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require('fs');
 const app=express();
+const request =require('request');
 
 //Inicializacion de puerto
 const port= process.env.PORT || 8080;

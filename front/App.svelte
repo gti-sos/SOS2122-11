@@ -3,6 +3,7 @@
   
 	import Home from './Home.svelte';
 	import Router from 'svelte-spa-router';
+	import Analytics from "./Analytics.svelte";
 	import InequalityTable from './inequality/inequalityTable.svelte';
 	import EINEQ from './inequality/EditInequalityTable.svelte';
 	import EducationTable from './education-stats/EducationTable.svelte';
@@ -15,6 +16,7 @@
 	const routes = {
 		"/": Home,
 		"/info": Home,
+		"/analytics":Analytics,
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
 		"/inequality-stats/inequalityHighCharts":InequalityHighCharts,
