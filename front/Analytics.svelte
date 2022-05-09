@@ -9,8 +9,12 @@
     var education=[];
     // Valores que se van a mostrar en la grafica
     var xKeys = [];
-    var inequalityGraph=[];
-    var educationGraph=[];
+    var inequalityGraphCoefficient=[];
+    var inequalityGraphEducations=[];
+    var inequalityGraphLifes=[];
+    var educationGraphDropCoe=[];
+    var educationGraphComCoe=[];
+    var educationGraphGobExp=[];
 
     
     let errorPrint = "";
@@ -36,13 +40,17 @@
         inequality.sort((a,b) => (a.year > b.year) ? 1 : ((b.year > a.year) ? -1 : 0));
         inequality.sort((a,b) => (a.country > b.country) ? 1 : ((b.country > a.country) ? -1 : 0));
         inequality.forEach(element=>{
-          inequalityGraph.push(parseFloat(element.coefficients));
+          inequalityGraphCoefficient.push(parseFloat(element.coefficients));
+          inequalityGraphEducations.push(parseFloat(element.educations));
+          inequalityGraphLifes.push(parseFloat(element.lifes));
         });
         // education
         education.sort((a,b) => (a.year > b.year) ? 1 : ((b.year > a.year) ? -1 : 0));
         education.sort((a,b) => (a.country > b.country) ? 1 : ((b.country > a.country) ? -1 : 0));
         education.forEach(element=>{
-          educationGraph.push(parseFloat(element.dropCoefficients));
+          educationGraphDropCoe.push(parseFloat(element.dropCoefficients));
+          educationGraphComCoe.push(parseFloat(element.completionCoefficients));
+          educationGraphGobExp.push(parseFloat(element.gobermentExpenditure));
      
         });
        
@@ -108,12 +116,29 @@
       },
       series: [{
           name: 'Desigualdad',
-          data: inequalityGraph
+          data: inequalityGraphCoefficient
           },
         {
           name: 'Educacion',
-          data: educationGraph
-        }]
+          data: inequalityGraphEducations
+        },
+        {
+          name: 'Esperanza de vida',
+          data: inequalityGraphEducations
+        },
+        {
+          name: 'Coeficiente de abandono',
+          data: educationGraphDropCoe
+        },
+        {
+          name: 'Coeficiente de finalización',
+          data: educationGraphComCoe
+        },
+        {
+          name: 'Gasto gubernamental',
+          data: educationGraphGobExp
+        }
+      ]
   });
       });
     }

@@ -17009,7 +17009,7 @@ var app = (function () {
     const { console: console_1$7 } = globals;
     const file$8 = "front\\Analytics.svelte";
 
-    // (132:8) <Button id ="volverbtn" href="#/info">
+    // (157:8) <Button id ="volverbtn" href="#/info">
     function create_default_slot$8(ctx) {
     	let t;
 
@@ -17029,14 +17029,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$8.name,
     		type: "slot",
-    		source: "(132:8) <Button id =\\\"volverbtn\\\" href=\\\"#/info\\\">",
+    		source: "(157:8) <Button id =\\\"volverbtn\\\" href=\\\"#/info\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (142:4) {:else}
+    // (167:4) {:else}
     function create_else_block(ctx) {
     	let div1;
     	let figure;
@@ -17065,17 +17065,17 @@ var app = (function () {
     			t3 = text("\r\n            · Educacion");
     			br2 = element("br");
     			attr_dev(div0, "id", "container");
-    			add_location(div0, file$8, 144, 10, 4163);
-    			add_location(strong, file$8, 146, 12, 4231);
-    			add_location(br0, file$8, 146, 59, 4278);
-    			add_location(br1, file$8, 147, 25, 4311);
-    			add_location(br2, file$8, 148, 23, 4342);
+    			add_location(div0, file$8, 169, 10, 5092);
+    			add_location(strong, file$8, 171, 12, 5160);
+    			add_location(br0, file$8, 171, 59, 5207);
+    			add_location(br1, file$8, 172, 25, 5240);
+    			add_location(br2, file$8, 173, 23, 5271);
     			attr_dev(p, "class", "centrado");
-    			add_location(p, file$8, 145, 10, 4197);
+    			add_location(p, file$8, 170, 10, 5126);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$8, 143, 8, 4117);
+    			add_location(figure, file$8, 168, 8, 5046);
     			set_style(div1, "margin-bottom", "15px");
-    			add_location(div1, file$8, 142, 6, 4074);
+    			add_location(div1, file$8, 167, 6, 5003);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -17100,14 +17100,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(142:4) {:else}",
+    		source: "(167:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:4) {#if errorPrint}
+    // (159:4) {#if errorPrint}
     function create_if_block$7(ctx) {
     	let div;
     	let span;
@@ -17128,12 +17128,12 @@ var app = (function () {
     			t2 = space();
     			t3 = text(/*errorPrint*/ ctx[0]);
     			set_style(strong, "align", "center");
-    			add_location(strong, file$8, 136, 10, 3936);
-    			add_location(p, file$8, 137, 10, 3993);
+    			add_location(strong, file$8, 161, 10, 4865);
+    			add_location(p, file$8, 162, 10, 4922);
     			attr_dev(span, "class", "alertERROR");
-    			add_location(span, file$8, 135, 8, 3899);
+    			add_location(span, file$8, 160, 8, 4828);
     			attr_dev(div, "class", "hideMe");
-    			add_location(div, file$8, 134, 6, 3869);
+    			add_location(div, file$8, 159, 6, 4798);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -17154,7 +17154,7 @@ var app = (function () {
     		block,
     		id: create_if_block$7.name,
     		type: "if",
-    		source: "(134:4) {#if errorPrint}",
+    		source: "(159:4) {#if errorPrint}",
     		ctx
     	});
 
@@ -17213,17 +17213,17 @@ var app = (function () {
     			t1 = space();
     			if_block.c();
     			if (!src_url_equal(script0.src, script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$8, 122, 4, 3322);
+    			add_location(script0, file$8, 147, 4, 4251);
     			if (!src_url_equal(script1.src, script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$8, 123, 4, 3393);
+    			add_location(script1, file$8, 148, 4, 4322);
     			if (!src_url_equal(script2.src, script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$8, 124, 4, 3474);
+    			add_location(script2, file$8, 149, 4, 4403);
     			if (!src_url_equal(script3.src, script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$8, 125, 4, 3552);
+    			add_location(script3, file$8, 150, 4, 4481);
     			if (!src_url_equal(script4.src, script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$8, 126, 4, 3632);
-    			add_location(body, file$8, 130, 4, 3766);
-    			add_location(main, file$8, 129, 2, 3754);
+    			add_location(script4, file$8, 151, 4, 4561);
+    			add_location(body, file$8, 155, 4, 4695);
+    			add_location(main, file$8, 154, 2, 4683);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17250,7 +17250,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 1024) {
+    			if (dirty & /*$$scope*/ 16384) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17306,8 +17306,12 @@ var app = (function () {
     	// Valores que se van a mostrar en la grafica
     	var xKeys = [];
 
-    	var inequalityGraph = [];
-    	var educationGraph = [];
+    	var inequalityGraphCoefficient = [];
+    	var inequalityGraphEducations = [];
+    	var inequalityGraphLifes = [];
+    	var educationGraphDropCoe = [];
+    	var educationGraphComCoe = [];
+    	var educationGraphGobExp = [];
     	let errorPrint = "";
 
     	async function getData() {
@@ -17336,7 +17340,9 @@ var app = (function () {
     			: b.country > a.country ? -1 : 0);
 
     			inequality.forEach(element => {
-    				inequalityGraph.push(parseFloat(element.coefficients));
+    				inequalityGraphCoefficient.push(parseFloat(element.coefficients));
+    				inequalityGraphEducations.push(parseFloat(element.educations));
+    				inequalityGraphLifes.push(parseFloat(element.lifes));
     			});
 
     			// education
@@ -17347,7 +17353,9 @@ var app = (function () {
     			: b.country > a.country ? -1 : 0);
 
     			education.forEach(element => {
-    				educationGraph.push(parseFloat(element.dropCoefficients));
+    				educationGraphDropCoe.push(parseFloat(element.dropCoefficients));
+    				educationGraphComCoe.push(parseFloat(element.completionCoefficients));
+    				educationGraphGobExp.push(parseFloat(element.gobermentExpenditure));
     			});
 
     			// Eliminamos repetidos y ordenamos por país y año
@@ -17391,9 +17399,28 @@ var app = (function () {
     				series: [
     					{
     						name: 'Desigualdad',
-    						data: inequalityGraph
+    						data: inequalityGraphCoefficient
     					},
-    					{ name: 'Educacion', data: educationGraph }
+    					{
+    						name: 'Educacion',
+    						data: inequalityGraphEducations
+    					},
+    					{
+    						name: 'Esperanza de vida',
+    						data: inequalityGraphEducations
+    					},
+    					{
+    						name: 'Coeficiente de abandono',
+    						data: educationGraphDropCoe
+    					},
+    					{
+    						name: 'Coeficiente de finalización',
+    						data: educationGraphComCoe
+    					},
+    					{
+    						name: 'Gasto gubernamental',
+    						data: educationGraphGobExp
+    					}
     				]
     			});
     		});
@@ -17412,8 +17439,12 @@ var app = (function () {
     		inequality,
     		education,
     		xKeys,
-    		inequalityGraph,
-    		educationGraph,
+    		inequalityGraphCoefficient,
+    		inequalityGraphEducations,
+    		inequalityGraphLifes,
+    		educationGraphDropCoe,
+    		educationGraphComCoe,
+    		educationGraphGobExp,
     		errorPrint,
     		getData,
     		loadGraph
@@ -17425,8 +17456,12 @@ var app = (function () {
     		if ('inequality' in $$props) inequality = $$props.inequality;
     		if ('education' in $$props) education = $$props.education;
     		if ('xKeys' in $$props) xKeys = $$props.xKeys;
-    		if ('inequalityGraph' in $$props) inequalityGraph = $$props.inequalityGraph;
-    		if ('educationGraph' in $$props) educationGraph = $$props.educationGraph;
+    		if ('inequalityGraphCoefficient' in $$props) inequalityGraphCoefficient = $$props.inequalityGraphCoefficient;
+    		if ('inequalityGraphEducations' in $$props) inequalityGraphEducations = $$props.inequalityGraphEducations;
+    		if ('inequalityGraphLifes' in $$props) inequalityGraphLifes = $$props.inequalityGraphLifes;
+    		if ('educationGraphDropCoe' in $$props) educationGraphDropCoe = $$props.educationGraphDropCoe;
+    		if ('educationGraphComCoe' in $$props) educationGraphComCoe = $$props.educationGraphComCoe;
+    		if ('educationGraphGobExp' in $$props) educationGraphGobExp = $$props.educationGraphGobExp;
     		if ('errorPrint' in $$props) $$invalidate(0, errorPrint = $$props.errorPrint);
     	};
 
@@ -23665,7 +23700,7 @@ var app = (function () {
     const { console: console_1$2 } = globals;
     const file$3 = "front\\education-stats\\EducationAnalytics.svelte";
 
-    // (166:14) <NavLink href="#/info">
+    // (164:14) <NavLink href="#/info">
     function create_default_slot_6$2(ctx) {
     	let t;
 
@@ -23685,14 +23720,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(166:14) <NavLink href=\\\"#/info\\\">",
+    		source: "(164:14) <NavLink href=\\\"#/info\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (165:12) <NavItem>
+    // (163:12) <NavItem>
     function create_default_slot_5$2(ctx) {
     	let navlink;
     	let current;
@@ -23741,14 +23776,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(165:12) <NavItem>",
+    		source: "(163:12) <NavItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:14) <NavLink href="#/integrations">
+    // (167:14) <NavLink href="#/integrations">
     function create_default_slot_4$2(ctx) {
     	let t;
 
@@ -23768,14 +23803,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(169:14) <NavLink href=\\\"#/integrations\\\">",
+    		source: "(167:14) <NavLink href=\\\"#/integrations\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:12) <NavItem>
+    // (166:12) <NavItem>
     function create_default_slot_3$2(ctx) {
     	let navlink;
     	let current;
@@ -23824,14 +23859,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(168:12) <NavItem>",
+    		source: "(166:12) <NavItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:14) <NavLink href="#/education-stats">
+    // (170:14) <NavLink href="#/education-stats">
     function create_default_slot_2$2(ctx) {
     	let t;
 
@@ -23851,14 +23886,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(172:14) <NavLink href=\\\"#/education-stats\\\">",
+    		source: "(170:14) <NavLink href=\\\"#/education-stats\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:12) <NavItem>
+    // (169:12) <NavItem>
     function create_default_slot_1$2(ctx) {
     	let navlink;
     	let current;
@@ -23907,14 +23942,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(171:12) <NavItem>",
+    		source: "(169:12) <NavItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:8) <Nav>
+    // (162:8) <Nav>
     function create_default_slot$2(ctx) {
     	let navitem0;
     	let t0;
@@ -24012,14 +24047,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(164:8) <Nav>",
+    		source: "(162:8) <Nav>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:6) {#if !cargados}
+    // (194:6) {#if !cargados}
     function create_if_block$2(ctx) {
     	let p;
 
@@ -24028,7 +24063,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = `${/*error*/ ctx[1]}`;
     			attr_dev(p, "class", "error svelte-1csvhee");
-    			add_location(p, file$3, 199, 8, 6227);
+    			add_location(p, file$3, 194, 8, 6046);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -24043,7 +24078,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(199:6) {#if !cargados}",
+    		source: "(194:6) {#if !cargados}",
     		ctx
     	});
 
@@ -24075,13 +24110,10 @@ var app = (function () {
     	let t5;
     	let div4;
     	let t6;
-    	let div6;
-    	let figure;
     	let div5;
-    	let t7;
     	let p;
-    	let t9;
-    	let div7;
+    	let t8;
+    	let div6;
     	let current;
     	let mounted;
     	let dispose;
@@ -24118,45 +24150,38 @@ var app = (function () {
     			t5 = space();
     			div4 = element("div");
     			t6 = space();
-    			div6 = element("div");
-    			figure = element("figure");
     			div5 = element("div");
-    			t7 = space();
     			p = element("p");
-    			p.textContent = "Gráficos de donuts que muestran los porcentajes de abandono, terminación y gasto gubernamental; respectivamente.";
-    			t9 = space();
-    			div7 = element("div");
+    			p.textContent = "Gráficos de tarta que muestran los porcentajes de abandono, terminación y gasto gubernamental; respectivamente.";
+    			t8 = space();
+    			div6 = element("div");
     			if (if_block) if_block.c();
     			if (!src_url_equal(script0.src, script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$3, 152, 2, 4848);
+    			add_location(script0, file$3, 150, 2, 4758);
     			if (!src_url_equal(script1.src, script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$3, 153, 2, 4917);
+    			add_location(script1, file$3, 151, 2, 4827);
     			if (!src_url_equal(script2.src, script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$3, 154, 2, 4996);
+    			add_location(script2, file$3, 152, 2, 4906);
     			if (!src_url_equal(script3.src, script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$3, 155, 2, 5072);
+    			add_location(script3, file$3, 153, 2, 4982);
     			if (!src_url_equal(script4.src, script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$3, 156, 2, 5150);
+    			add_location(script4, file$3, 154, 2, 5060);
     			attr_dev(div0, "class", "nav svelte-1csvhee");
-    			add_location(div0, file$3, 162, 4, 5288);
-    			add_location(h1, file$3, 178, 8, 5730);
-    			add_location(div1, file$3, 177, 4, 5715);
+    			add_location(div0, file$3, 160, 4, 5198);
+    			add_location(h1, file$3, 176, 8, 5640);
+    			add_location(div1, file$3, 175, 4, 5625);
     			attr_dev(div2, "id", "first");
-    			add_location(div2, file$3, 183, 4, 5804);
+    			add_location(div2, file$3, 181, 4, 5714);
     			attr_dev(div3, "id", "second");
-    			add_location(div3, file$3, 184, 4, 5832);
+    			add_location(div3, file$3, 182, 4, 5742);
     			attr_dev(div4, "id", "third");
-    			add_location(div4, file$3, 185, 4, 5861);
-    			attr_dev(div5, "id", "container");
-    			add_location(div5, file$3, 189, 10, 5943);
+    			add_location(div4, file$3, 183, 4, 5771);
     			attr_dev(p, "class", "description");
-    			add_location(p, file$3, 190, 10, 5977);
-    			attr_dev(figure, "class", "figure");
-    			add_location(figure, file$3, 188, 8, 5908);
-    			add_location(div6, file$3, 187, 4, 5893);
-    			add_location(div7, file$3, 197, 4, 6189);
+    			add_location(p, file$3, 186, 8, 5818);
+    			add_location(div5, file$3, 185, 4, 5803);
+    			add_location(div6, file$3, 192, 4, 6008);
     			attr_dev(main, "class", "svelte-1csvhee");
-    			add_location(main, file$3, 161, 0, 5276);
+    			add_location(main, file$3, 159, 0, 5186);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24181,14 +24206,11 @@ var app = (function () {
     			append_dev(main, t5);
     			append_dev(main, div4);
     			append_dev(main, t6);
+    			append_dev(main, div5);
+    			append_dev(div5, p);
+    			append_dev(main, t8);
     			append_dev(main, div6);
-    			append_dev(div6, figure);
-    			append_dev(figure, div5);
-    			append_dev(figure, t7);
-    			append_dev(figure, p);
-    			append_dev(main, t9);
-    			append_dev(main, div7);
-    			if (if_block) if_block.m(div7, null);
+    			if (if_block) if_block.m(div6, null);
     			current = true;
 
     			if (!mounted) {
@@ -24211,7 +24233,7 @@ var app = (function () {
     				} else {
     					if_block = create_if_block$2(ctx);
     					if_block.c();
-    					if_block.m(div7, null);
+    					if_block.m(div6, null);
     				}
     			} else if (if_block) {
     				if_block.d(1);
@@ -24374,7 +24396,7 @@ var app = (function () {
     				text: 'Estadisticas del gasto gubernamental en educación'
     			},
     			tooltip: {
-    				pointFormat: '{educationGobExp}: <b>{point.percentage:.1f}%</b>'
+    				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     			},
     			accessibility: { point: { valueSuffix: '%' } },
     			plotOptions: {
