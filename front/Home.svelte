@@ -49,7 +49,7 @@
         >
       </Col>
     </Container>
-  <Button  id ="analyticsbtn" color = primary href="https://sos2122-1.herokuapp.com/#/analytics">Gráfica Grupal</Button>
+  <Button  id ="analyticsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/analytics">Gráfica Grupal</Button>
   <Button  id ="integrationsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/integrations">Integraciones</Button>
  
 
@@ -93,6 +93,9 @@
               <Button color="primary">API</Button></a>
             <a href="/#/education-stats">
               <Button color="primary">Interfaz</Button>
+            </a>
+            <a href="/#/education-stats/analytics">
+              <Button color="primary">Grafica Doughnut</Button>
             </a>
             <a href="https://documenter.getpostman.com/view/19481545/UyrBhvbJ"
               ><Button color="info">Documentación Backend en Postman</Button></a>
