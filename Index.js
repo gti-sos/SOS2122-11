@@ -50,8 +50,8 @@ function isAO(val) {
 }
 
 //Datos postman
-app.get("/api/v1/inequality-stats/docs", (request, response) => {
-	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UVsPP4hn');
+app.get("/api/v2/inequality-stats/docs", (request, response) => {
+	response.redirect(301, 'https://documenter.getpostman.com/view/14951179/UyxdMVXv');
 });
 
 app.get("/api/v2/education-stats/docs", (request, response) => {
