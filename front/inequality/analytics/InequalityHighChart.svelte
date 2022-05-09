@@ -89,7 +89,7 @@
           <NavLink href="#/integrations">Integrations</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#/unemployment-stats">Datos</NavLink>
+          <NavLink href="#/inequality-stats">Datos</NavLink>
         </NavItem>
     </Nav>
   

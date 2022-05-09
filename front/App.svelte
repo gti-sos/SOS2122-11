@@ -4,13 +4,18 @@
 	import Home from './Home.svelte';
 	import Router from 'svelte-spa-router';
 	import Analytics from "./Analytics.svelte";
+	// Tony
+
 	import InequalityTable from './inequality/inequalityTable.svelte';
 	import EINEQ from './inequality/EditInequalityTable.svelte';
+	import InequalityHighCharts from './inequality/analytics/InequalityHighChart.svelte';
+	import InequalityPlotlyCharts from './inequality/analytics/InequalityPlotlyChart.svelte';
+	import Apiexterna1Tony from './inequality/analytics/Apiexterna1.svelte';
+	import Apiexterna2Tony from './inequality/analytics/Apiexterna2.svelte';
+
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
 	import EducationAnalytics from './education-stats/EducationAnalytics.svelte';
-	import InequalityHighCharts from './inequality/analytics/InequalityHighChart.svelte';
-	import InequalityPlotlyCharts from './inequality/analytics/InequalityPlotlyChart.svelte';
 
 
 	
@@ -22,6 +27,8 @@
 		"/inequality-stats/:country/:year": EINEQ,
 		"/inequality-stats/inequalityHighCharts":InequalityHighCharts,
 		"/inequality-stats/inequalityPlotlyCharts":InequalityPlotlyCharts,
+		"/inequality-stats/Apiexterna1tony":Apiexterna1Tony,
+		"/inequality-stats/Apiexterna2tony":Apiexterna2Tony,
 		"/education-stats/": EducationTable,
 		"/education-stats/:country/:year": EditEducationTable,
 		"/education-stats/analytics": EducationAnalytics,
