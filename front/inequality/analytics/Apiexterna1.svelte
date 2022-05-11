@@ -1,39 +1,35 @@
 
 
 <script>
-	import {pop} from "svelte-spa-router";
-    import Button from "sveltestrap/src/Button.svelte";
-    var APIext = "https://api.quotable.io/random"
-    let Quote = [];
+    var APIext = "https://api.n.exchange/en/api/v1/currency/"
+    let Divisa = [];
+    let obj;
+    let data=[];
 	async function loadGraph(){
         console.log("");	
 		const res = await fetch(APIext);  //Piped proxy
 		if (res.ok) {
 			console.log("Ok, loaded successfully");
 			const json = await res.json();
-            Quote = json;
+            Divisa = json;
 		} else {
 			console.log("ERROR!");
         }
-        let frase = Quote.content;
-    
-        var text = frase;
-        var lines = text.split(/[,\. ]+/g),
-        data = Highcharts.reduce(lines, function (arr, word) {
-            var obj = Highcharts.find(arr, function (obj) {
-            return obj.name === word;
-            });
-            if (obj) {
-            obj.weight += 1;
-            } else {
-            obj = {
-                name: word,
-                weight: 1
-            };
-            arr.push(obj);
-            }
-            return arr;
-        }, []);
+        
+        Divisa.forEach(x =>{
+        console.log(Object.keys(x));
+        obj = {
+                    name: x.name,
+                    weight: parseFloat(x.maximal_amount) 
+                };
+        data.push(obj);
+        
+      }  )
+        
+        
+
+            
+
         Highcharts.chart('container', {
         accessibility: {
             screenReaderSection: {
@@ -49,7 +45,7 @@
                 name: 'Valor'
             }],
             title: {
-                text: 'Frases célebres'
+                text: 'Divisas'
             }
         });
         
@@ -68,13 +64,10 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-          {Quote.content}<br> - {Quote.author}
+          Cuanto mayor es el tamaño del nombre, mayor es su cantidad minima
         </p>
     </figure>
-    <Button color="primary" onclick="location.reload()" style="margin-left: 35%; width: 25%;"> Siguiente frase</Button>
-
-    <br>
-    <Button id="back" outline color="secondary" on:click="{pop}"> Atrás</Button>
+    
 </main>
 
 <style>
