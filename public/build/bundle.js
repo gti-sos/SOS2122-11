@@ -22300,7 +22300,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1$3 } = globals;
     const file$4 = "front\\inequality\\analytics\\Apiexterna2.svelte";
 
-    // (59:8) <NavLink href="/">
+    // (60:8) <NavLink href="/">
     function create_default_slot_4$2(ctx) {
     	let t;
 
@@ -22320,14 +22320,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(59:8) <NavLink href=\\\"/\\\">",
+    		source: "(60:8) <NavLink href=\\\"/\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:6) <NavItem>
+    // (59:6) <NavItem>
     function create_default_slot_3$2(ctx) {
     	let navlink;
     	let current;
@@ -22352,7 +22352,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const navlink_changes = {};
 
-    			if (dirty & /*$$scope*/ 32) {
+    			if (dirty & /*$$scope*/ 128) {
     				navlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -22376,14 +22376,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(58:6) <NavItem>",
+    		source: "(59:6) <NavItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:8) <NavLink href="/#/integrations/">
+    // (63:8) <NavLink href="/#/integrations/">
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -22403,14 +22403,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(62:8) <NavLink href=\\\"/#/integrations/\\\">",
+    		source: "(63:8) <NavLink href=\\\"/#/integrations/\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:6) <NavItem>
+    // (62:6) <NavItem>
     function create_default_slot_1$3(ctx) {
     	let navlink;
     	let current;
@@ -22435,7 +22435,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const navlink_changes = {};
 
-    			if (dirty & /*$$scope*/ 32) {
+    			if (dirty & /*$$scope*/ 128) {
     				navlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -22459,14 +22459,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(61:6) <NavItem>",
+    		source: "(62:6) <NavItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:4) <Nav>
+    // (58:4) <Nav>
     function create_default_slot$3(ctx) {
     	let navitem0;
     	let t;
@@ -22504,14 +22504,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const navitem0_changes = {};
 
-    			if (dirty & /*$$scope*/ 32) {
+    			if (dirty & /*$$scope*/ 128) {
     				navitem0_changes.$$scope = { dirty, ctx };
     			}
 
     			navitem0.$set(navitem0_changes);
     			const navitem1_changes = {};
 
-    			if (dirty & /*$$scope*/ 32) {
+    			if (dirty & /*$$scope*/ 128) {
     				navitem1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -22539,14 +22539,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(57:4) <Nav>",
+    		source: "(58:4) <Nav>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:4) {:else}
+    // (73:4) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -22555,7 +22555,7 @@ var app = (function () {
     			div = element("div");
     			attr_dev(div, "id", "chartDiv");
     			attr_dev(div, "class", "svelte-vkptxm");
-    			add_location(div, file$4, 72, 6, 1910);
+    			add_location(div, file$4, 73, 6, 1854);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -22570,14 +22570,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(72:4) {:else}",
+    		source: "(73:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:4) {#if errorMsg}
+    // (71:4) {#if errorMsg}
     function create_if_block$3(ctx) {
     	let p;
     	let t;
@@ -22586,7 +22586,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(/*errorMsg*/ ctx[0]);
-    			add_location(p, file$4, 70, 6, 1872);
+    			add_location(p, file$4, 71, 6, 1816);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -22604,7 +22604,7 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(70:4) {#if errorMsg}",
+    		source: "(71:4) {#if errorMsg}",
     		ctx
     	});
 
@@ -22650,14 +22650,14 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			h2 = element("h2");
-    			h2.textContent = "Uso API externa Rick and Morty API";
+    			h2.textContent = "Uso API externa Enfermedades en alemania";
     			t3 = space();
     			if_block.c();
     			if (!src_url_equal(script.src, script_src_value = "https://code.jscharting.com/latest/jscharting.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$4, 50, 4, 1421);
-    			add_location(h2, file$4, 66, 6, 1785);
-    			add_location(div, file$4, 65, 4, 1772);
-    			add_location(main, file$4, 55, 2, 1550);
+    			add_location(script, file$4, 51, 4, 1359);
+    			add_location(h2, file$4, 67, 6, 1723);
+    			add_location(div, file$4, 66, 4, 1710);
+    			add_location(main, file$4, 56, 2, 1488);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22682,7 +22682,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const nav_changes = {};
 
-    			if (dirty & /*$$scope*/ 32) {
+    			if (dirty & /*$$scope*/ 128) {
     				nav_changes.$$scope = { dirty, ctx };
     			}
 
@@ -22734,23 +22734,23 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Apiexterna2', slots, []);
-    	var characters = [];
+    	var apienfermedad = [];
+    	let aux = [];
+    	let array = [];
     	var errorMsg = "";
     	var okMsg = "";
 
     	async function getStats() {
     		console.log("Fetching data...");
-    		const res = await fetch("https://rickandmortyapi.com/api/character/");
+    		const res = await fetch("https://disease.sh/v2/gov/Germany");
 
     		if (res.ok) {
     			const json = await res.json();
-    			characters = json.results;
-    			console.log(Object.keys(json));
-    			console.log(Object.keys(characters));
-    			console.log(`We have received ${characters.length} characters.`);
+    			console.log(`We have received ${json} characters.`);
     			console.log("Ok");
+    			apienfermedad = json;
     		} else {
-    			$$invalidate(0, errorMsg = "Error al obtener los  datos de los personajes");
+    			$$invalidate(0, errorMsg = "Error al obtener los  datos de api externa");
     			okMsg = "";
     			console.log("ERROR!" + errorMsg);
     		}
@@ -22760,21 +22760,24 @@ var app = (function () {
     		await getStats();
     		var array = [];
 
-    		characters.forEach(c => {
-    			//console.log(Object.keys(c));
-    			console.log(`imprimiendo c ${c}`);
+    		apienfermedad.forEach(x => {
+    			console.log(Object.keys(x));
 
-    			var point = { x: "name", y: null };
-    			point.x = c.name;
-    			point.y = c.episode.length;
+    			aux = {
+    				name: x.province,
+    				data: [x.casesPerHundredThousand, 0]
+    			};
+
+    			var point = {
+    				x: "name",
+    				y: "Casos por cien mil habitantes"
+    			};
+
+    			point.x = x.province;
+    			point.y = x.casesPerHundredThousand;
     			array.push(point);
     		});
 
-    		/* let points = [
-      { x: "A", y: 10 },
-      { x: "B", y: 5 },
-    ];
-       */
     		new JSC.Chart("chartDiv",
     		{
     				// Pass points to the series
@@ -22792,7 +22795,9 @@ var app = (function () {
     		Nav,
     		NavItem,
     		NavLink,
-    		characters,
+    		apienfermedad,
+    		aux,
+    		array,
     		errorMsg,
     		okMsg,
     		getStats,
@@ -22800,7 +22805,9 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('characters' in $$props) characters = $$props.characters;
+    		if ('apienfermedad' in $$props) apienfermedad = $$props.apienfermedad;
+    		if ('aux' in $$props) aux = $$props.aux;
+    		if ('array' in $$props) array = $$props.array;
     		if ('errorMsg' in $$props) $$invalidate(0, errorMsg = $$props.errorMsg);
     		if ('okMsg' in $$props) okMsg = $$props.okMsg;
     	};

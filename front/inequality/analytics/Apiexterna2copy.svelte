@@ -3,21 +3,21 @@
 <script>
     import { Nav, NavItem, NavLink } from "sveltestrap";
     //Uso de API externa rick and morty
-    var apienfermedad = [];
-    let aux = []
-		let array = []
+    var characters = [];
     var errorMsg = "";
     var okMsg = "";
     async function getStats() {
       console.log("Fetching data...");
-      const res = await fetch("https://disease.sh/v2/gov/Germany");
+      const res = await fetch("https://rickandmortyapi.com/api/character/");
       if (res.ok) {
         const json = await res.json();
-        console.log(`We have received ${json} characters.`);
+        characters = json.results;
+        console.log(Object.keys(json));
+        console.log(Object.keys(characters));
+        console.log(`We have received ${characters.length} characters.`);
         console.log("Ok");
-        apienfermedad=json;
       } else {
-        errorMsg = "Error al obtener los  datos de api externa";
+        errorMsg = "Error al obtener los  datos de los personajes";
         okMsg = "";
         console.log("ERROR!" + errorMsg);
       }
@@ -26,21 +26,20 @@
       await getStats();
       var array = [];
      
-      apienfermedad.forEach(x =>{
-        console.log(Object.keys(x));
-        aux={ 
-            name: x.province,
-            data:[x.casesPerHundredThousand,0]
-        }
-
-        var point ={x: "name", y: "Casos por cien mil habitantes"}
-        point.x = x.province
-        point.y = x.casesPerHundredThousand
-        array.push(point) 
+      characters.forEach(c =>{
+        //console.log(Object.keys(c));
         
+        console.log(`imprimiendo c ${c}`);
+        var point ={x: "name", y: null}
+        point.x = c.name
+        point.y = c.episode.length
+        array.push(point) 
       }  )
-     
-  
+      /* let points = [
+        { x: "A", y: 10 },
+        { x: "B", y: 5 },
+      ];
+   */
       const chart = new JSC.Chart("chartDiv", {
         // Pass points to the series
         series: [{ points: array }],
@@ -65,7 +64,7 @@
     </Nav>
   
     <div>
-      <h2>Uso API externa Enfermedades en alemania</h2>
+      <h2>Uso API externa Rick and Morty API</h2>
     </div>
   
     {#if errorMsg}
