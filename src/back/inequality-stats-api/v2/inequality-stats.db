@@ -1,6 +1,11 @@
-{"country":"India","year":"2015","coefficients":"26.5","educations":"39.4","lifes":"24","_id":"6YAgNuJA8OuAS89x"}
-{"country":"Afghanistan","year":"2015","coefficients":"1","educations":"1","lifes":"1","_id":"A3zvoAB10U78r7aV"}
-{"country":"Iraq","year":"2018","coefficients":"19.4","educations":"29.7","lifes":"15.9","_id":"APjwKq8xIQILfbR6"}
-{"country":"Pakistan","year":"2018","coefficients":"29.6","educations":"43.5","lifes":"29.9","_id":"a7Fq8kUXDcqcfp7R"}
-{"country":"Honduras","year":"2018","coefficients":"24.9","educations":"23","lifes":"13.3","_id":"d00HiOXWsaN12udP"}
-{"country":"Brasil","year":"2018","coefficients":"23.6","educations":"22","lifes":"10.9","_id":"pNo33cslUQItxAU6"}
+{"country":"Italia","year":"2018","coefficients":"11.8","educations":"10.6","lifes":"3.1","_id":"0bS40Ok2d3VLK6u6"}
+{"country":"Iraq","year":"2018","coefficients":"19.4","educations":"29.7","lifes":"15.9","_id":"ARTDd5lJzrV60lZY"}
+{"country":"Honduras","year":"2018","coefficients":"24.9","educations":"23","lifes":"13.3","_id":"ApmNp1aGVK3cNZen"}
+{"country":"Francia","year":"2018","coefficients":"9.1","educations":"9.5","lifes":"3.8","_id":"BJZ1l1Nt8n36qZU2"}
+{"country":"España","year":"2019","coefficients":"13.1","educations":"17.5","lifes":"3.5","_id":"JIvZGcXIR2ZrBsvq"}
+{"country":"India","year":"2015","coefficients":"26.5","educations":"39.4","lifes":"24","_id":"JSkAsMOO2BLSv5jL"}
+{"country":"Brasil","year":"2018","coefficients":"23.6","educations":"22","lifes":"10.9","_id":"MqgbIhGRezJWRUXh"}
+{"country":"Afghanistan","year":"2015","coefficients":"30.4","educations":"44.8","lifes":"35.7","_id":"Xyxi9rOrZKI4hpFq"}
+{"country":"España","year":"2018","coefficients":"14.0","educations":"16.9","lifes":"3.0","_id":"ovRMgFqubO4KBV5U"}
+{"country":"Pakistan","year":"2018","coefficients":"29.6","educations":"43.5","lifes":"29.9","_id":"s12LuAxsU9NqEMuJ"}
+{"country":"Alemania","year":"2019","coefficients":"7.9","educations":"2.3","lifes":"3.8","_id":"sV141Iv3LYpglj1p"}

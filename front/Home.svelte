@@ -72,6 +72,9 @@
             <a href="/#/inequality-stats/inequalityHighCharts">
               <Button color="primary">Grafica Highchart</Button>
             </a>
+            <a href="/#/inequality-stats/inequalityPlotlyCharts">
+              <Button color="primary">Grafica Awesome</Button>
+            </a>
             <a href="https://documenter.getpostman.com/view/14951179/UyxdMVXv"
               ><Button color="info">Documentación Backend en Postman</Button></a>
             

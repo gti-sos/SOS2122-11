@@ -4,16 +4,18 @@ const bodyParser = require("body-parser");
 const fs = require('fs');
 const app=express();
 const request =require('request');
+var cors = require("cors");
 
 //Inicializacion de puerto
 const port= process.env.PORT || 8080;
 app.use(bodyParser.json());
+app.use(cors());
 
 
 //Inicializacion de Apis
 //Inequality stats
-var inequality_api = require("./src/back/inequality-stats-api");
-inequality_api.register(app);
+//var inequality_api = require("./src/back/inequality-stats-api");
+//inequality_api.register(app);
 var inequality_api = require("./src/back/inequality-stats-api/v2");
 inequality_api.register(app);
 

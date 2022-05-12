@@ -14061,7 +14061,7 @@ var app = (function () {
     const file$b = "front\\Home.svelte";
 
     // (23:6) <Col>
-    function create_default_slot_30(ctx) {
+    function create_default_slot_31(ctx) {
     	let a;
 
     	const block = {
@@ -14082,7 +14082,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_30.name,
+    		id: create_default_slot_31.name,
     		type: "slot",
     		source: "(23:6) <Col>",
     		ctx
@@ -14092,7 +14092,7 @@ var app = (function () {
     }
 
     // (26:6) <Col>
-    function create_default_slot_29(ctx) {
+    function create_default_slot_30(ctx) {
     	let a;
 
     	const block = {
@@ -14113,7 +14113,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_29.name,
+    		id: create_default_slot_30.name,
     		type: "slot",
     		source: "(26:6) <Col>",
     		ctx
@@ -14123,7 +14123,7 @@ var app = (function () {
     }
 
     // (29:6) <Col>
-    function create_default_slot_28(ctx) {
+    function create_default_slot_29(ctx) {
     	let a;
 
     	const block = {
@@ -14144,7 +14144,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_28.name,
+    		id: create_default_slot_29.name,
     		type: "slot",
     		source: "(29:6) <Col>",
     		ctx
@@ -14154,7 +14154,7 @@ var app = (function () {
     }
 
     // (22:4) <Container>
-    function create_default_slot_27(ctx) {
+    function create_default_slot_28(ctx) {
     	let col0;
     	let t0;
     	let col1;
@@ -14164,7 +14164,7 @@ var app = (function () {
 
     	col0 = new Col({
     			props: {
-    				$$slots: { default: [create_default_slot_30] },
+    				$$slots: { default: [create_default_slot_31] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14172,7 +14172,7 @@ var app = (function () {
 
     	col1 = new Col({
     			props: {
-    				$$slots: { default: [create_default_slot_29] },
+    				$$slots: { default: [create_default_slot_30] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14180,7 +14180,7 @@ var app = (function () {
 
     	col2 = new Col({
     			props: {
-    				$$slots: { default: [create_default_slot_28] },
+    				$$slots: { default: [create_default_slot_29] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14249,7 +14249,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_27.name,
+    		id: create_default_slot_28.name,
     		type: "slot",
     		source: "(22:4) <Container>",
     		ctx
@@ -14259,7 +14259,7 @@ var app = (function () {
     }
 
     // (41:6) <Col>
-    function create_default_slot_26(ctx) {
+    function create_default_slot_27(ctx) {
     	let a;
     	let b;
     	let t1;
@@ -14288,7 +14288,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_26.name,
+    		id: create_default_slot_27.name,
     		type: "slot",
     		source: "(41:6) <Col>",
     		ctx
@@ -14298,7 +14298,7 @@ var app = (function () {
     }
 
     // (46:6) <Col>
-    function create_default_slot_25(ctx) {
+    function create_default_slot_26(ctx) {
     	let a;
     	let b;
     	let t1;
@@ -14327,7 +14327,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_25.name,
+    		id: create_default_slot_26.name,
     		type: "slot",
     		source: "(46:6) <Col>",
     		ctx
@@ -14337,7 +14337,7 @@ var app = (function () {
     }
 
     // (40:4) <Container>
-    function create_default_slot_24(ctx) {
+    function create_default_slot_25(ctx) {
     	let col0;
     	let t;
     	let col1;
@@ -14345,7 +14345,7 @@ var app = (function () {
 
     	col0 = new Col({
     			props: {
-    				$$slots: { default: [create_default_slot_26] },
+    				$$slots: { default: [create_default_slot_27] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14353,7 +14353,7 @@ var app = (function () {
 
     	col1 = new Col({
     			props: {
-    				$$slots: { default: [create_default_slot_25] },
+    				$$slots: { default: [create_default_slot_26] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14407,7 +14407,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_24.name,
+    		id: create_default_slot_25.name,
     		type: "slot",
     		source: "(40:4) <Container>",
     		ctx
@@ -14417,7 +14417,7 @@ var app = (function () {
     }
 
     // (52:2) <Button  id ="analyticsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/analytics">
-    function create_default_slot_23(ctx) {
+    function create_default_slot_24(ctx) {
     	let t;
 
     	const block = {
@@ -14434,7 +14434,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_23.name,
+    		id: create_default_slot_24.name,
     		type: "slot",
     		source: "(52:2) <Button  id =\\\"analyticsbtn\\\" color = primary href=\\\"https://sos2122-11.herokuapp.com/#/analytics\\\">",
     		ctx
@@ -14444,7 +14444,7 @@ var app = (function () {
     }
 
     // (53:2) <Button  id ="integrationsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/integrations">
-    function create_default_slot_22(ctx) {
+    function create_default_slot_23(ctx) {
     	let t;
 
     	const block = {
@@ -14461,7 +14461,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_22.name,
+    		id: create_default_slot_23.name,
     		type: "slot",
     		source: "(53:2) <Button  id =\\\"integrationsbtn\\\" color = primary href=\\\"https://sos2122-11.herokuapp.com/#/integrations\\\">",
     		ctx
@@ -14471,7 +14471,7 @@ var app = (function () {
     }
 
     // (62:12) <CardTitle>
-    function create_default_slot_21(ctx) {
+    function create_default_slot_22(ctx) {
     	let h3;
 
     	const block = {
@@ -14491,7 +14491,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_22.name,
     		type: "slot",
     		source: "(62:12) <CardTitle>",
     		ctx
@@ -14501,13 +14501,13 @@ var app = (function () {
     }
 
     // (61:10) <CardHeader>
-    function create_default_slot_20(ctx) {
+    function create_default_slot_21(ctx) {
     	let cardtitle;
     	let current;
 
     	cardtitle = new CardTitle({
     			props: {
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14546,7 +14546,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_20.name,
+    		id: create_default_slot_21.name,
     		type: "slot",
     		source: "(61:10) <CardHeader>",
     		ctx
@@ -14556,7 +14556,7 @@ var app = (function () {
     }
 
     // (66:12) <CardText>
-    function create_default_slot_19(ctx) {
+    function create_default_slot_20(ctx) {
     	let t;
 
     	const block = {
@@ -14573,7 +14573,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_19.name,
+    		id: create_default_slot_20.name,
     		type: "slot",
     		source: "(66:12) <CardText>",
     		ctx
@@ -14583,7 +14583,7 @@ var app = (function () {
     }
 
     // (68:14) <Button color="primary">
-    function create_default_slot_18(ctx) {
+    function create_default_slot_19(ctx) {
     	let t;
 
     	const block = {
@@ -14600,7 +14600,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_18.name,
+    		id: create_default_slot_19.name,
     		type: "slot",
     		source: "(68:14) <Button color=\\\"primary\\\">",
     		ctx
@@ -14610,7 +14610,7 @@ var app = (function () {
     }
 
     // (70:14) <Button color="primary">
-    function create_default_slot_17(ctx) {
+    function create_default_slot_18(ctx) {
     	let t;
 
     	const block = {
@@ -14627,7 +14627,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_17.name,
+    		id: create_default_slot_18.name,
     		type: "slot",
     		source: "(70:14) <Button color=\\\"primary\\\">",
     		ctx
@@ -14637,7 +14637,7 @@ var app = (function () {
     }
 
     // (73:14) <Button color="primary">
-    function create_default_slot_16(ctx) {
+    function create_default_slot_17(ctx) {
     	let t;
 
     	const block = {
@@ -14654,7 +14654,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_16.name,
+    		id: create_default_slot_17.name,
     		type: "slot",
     		source: "(73:14) <Button color=\\\"primary\\\">",
     		ctx
@@ -14663,7 +14663,34 @@ var app = (function () {
     	return block;
     }
 
-    // (76:15) <Button color="info">
+    // (76:14) <Button color="primary">
+    function create_default_slot_16(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Grafica Awesome");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_16.name,
+    		type: "slot",
+    		source: "(76:14) <Button color=\\\"primary\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (79:15) <Button color="info">
     function create_default_slot_15$2(ctx) {
     	let t;
 
@@ -14683,7 +14710,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$2.name,
     		type: "slot",
-    		source: "(76:15) <Button color=\\\"info\\\">",
+    		source: "(79:15) <Button color=\\\"info\\\">",
     		ctx
     	});
 
@@ -14707,12 +14734,15 @@ var app = (function () {
     	let t4;
     	let a3;
     	let button3;
+    	let t5;
+    	let a4;
+    	let button4;
     	let current;
     	cardsubtitle = new CardSubtitle({ $$inline: true });
 
     	cardtext = new CardText({
     			props: {
-    				$$slots: { default: [create_default_slot_19] },
+    				$$slots: { default: [create_default_slot_20] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14721,7 +14751,7 @@ var app = (function () {
     	button0 = new Button({
     			props: {
     				color: "primary",
-    				$$slots: { default: [create_default_slot_18] },
+    				$$slots: { default: [create_default_slot_19] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14730,7 +14760,7 @@ var app = (function () {
     	button1 = new Button({
     			props: {
     				color: "primary",
-    				$$slots: { default: [create_default_slot_17] },
+    				$$slots: { default: [create_default_slot_18] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14739,13 +14769,22 @@ var app = (function () {
     	button2 = new Button({
     			props: {
     				color: "primary",
-    				$$slots: { default: [create_default_slot_16] },
+    				$$slots: { default: [create_default_slot_17] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
     	button3 = new Button({
+    			props: {
+    				color: "primary",
+    				$$slots: { default: [create_default_slot_16] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button4 = new Button({
     			props: {
     				color: "info",
     				$$slots: { default: [create_default_slot_15$2] },
@@ -14771,14 +14810,19 @@ var app = (function () {
     			t4 = space();
     			a3 = element("a");
     			create_component(button3.$$.fragment);
+    			t5 = space();
+    			a4 = element("a");
+    			create_component(button4.$$.fragment);
     			attr_dev(a0, "href", "https://sos2122-11.herokuapp.com/api/v2/inequality-stats");
     			add_location(a0, file$b, 66, 12, 1826);
     			attr_dev(a1, "href", "/#/inequality-stats");
     			add_location(a1, file$b, 68, 12, 1963);
     			attr_dev(a2, "href", "/#/inequality-stats/inequalityHighCharts");
     			add_location(a2, file$b, 71, 12, 2082);
-    			attr_dev(a3, "href", "https://documenter.getpostman.com/view/14951179/UyxdMVXv");
+    			attr_dev(a3, "href", "/#/inequality-stats/inequalityPlotlyCharts");
     			add_location(a3, file$b, 74, 12, 2231);
+    			attr_dev(a4, "href", "https://documenter.getpostman.com/view/14951179/UyxdMVXv");
+    			add_location(a4, file$b, 77, 12, 2380);
     		},
     		m: function mount(target, anchor) {
     			mount_component(cardsubtitle, target, anchor);
@@ -14796,6 +14840,9 @@ var app = (function () {
     			insert_dev(target, t4, anchor);
     			insert_dev(target, a3, anchor);
     			mount_component(button3, a3, null);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, a4, anchor);
+    			mount_component(button4, a4, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -14834,6 +14881,13 @@ var app = (function () {
     			}
 
     			button3.$set(button3_changes);
+    			const button4_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button4_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button4.$set(button4_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -14843,6 +14897,7 @@ var app = (function () {
     			transition_in(button1.$$.fragment, local);
     			transition_in(button2.$$.fragment, local);
     			transition_in(button3.$$.fragment, local);
+    			transition_in(button4.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -14852,6 +14907,7 @@ var app = (function () {
     			transition_out(button1.$$.fragment, local);
     			transition_out(button2.$$.fragment, local);
     			transition_out(button3.$$.fragment, local);
+    			transition_out(button4.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -14870,6 +14926,9 @@ var app = (function () {
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(a3);
     			destroy_component(button3);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(a4);
+    			destroy_component(button4);
     		}
     	};
 
@@ -14884,7 +14943,7 @@ var app = (function () {
     	return block;
     }
 
-    // (79:10) <CardFooter              >
+    // (82:10) <CardFooter              >
     function create_default_slot_13$2(ctx) {
     	let t0;
     	let a;
@@ -14895,7 +14954,7 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "Antonio Maiquez";
     			attr_dev(a, "href", "https://github.com/Jackman97");
-    			add_location(a, file$b, 80, 12, 2486);
+    			add_location(a, file$b, 83, 12, 2635);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -14912,7 +14971,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$2.name,
     		type: "slot",
-    		source: "(79:10) <CardFooter              >",
+    		source: "(82:10) <CardFooter              >",
     		ctx
     	});
 
@@ -14930,7 +14989,7 @@ var app = (function () {
 
     	cardheader = new CardHeader({
     			props: {
-    				$$slots: { default: [create_default_slot_20] },
+    				$$slots: { default: [create_default_slot_21] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15024,7 +15083,7 @@ var app = (function () {
     	return block;
     }
 
-    // (87:12) <CardTitle>
+    // (90:12) <CardTitle>
     function create_default_slot_11$2(ctx) {
     	let h3;
 
@@ -15032,7 +15091,7 @@ var app = (function () {
     		c: function create() {
     			h3 = element("h3");
     			h3.textContent = "Estadísticas de educación";
-    			add_location(h3, file$b, 86, 23, 2668);
+    			add_location(h3, file$b, 89, 23, 2817);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -15047,14 +15106,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(87:12) <CardTitle>",
+    		source: "(90:12) <CardTitle>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:10) <CardHeader>
+    // (89:10) <CardHeader>
     function create_default_slot_10$2(ctx) {
     	let cardtitle;
     	let current;
@@ -15102,14 +15161,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(86:10) <CardHeader>",
+    		source: "(89:10) <CardHeader>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:12) <CardText>
+    // (94:12) <CardText>
     function create_default_slot_9$2(ctx) {
     	let t;
 
@@ -15129,14 +15188,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(91:12) <CardText>",
+    		source: "(94:12) <CardText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:14) <Button color="primary">
+    // (96:14) <Button color="primary">
     function create_default_slot_8$2(ctx) {
     	let t;
 
@@ -15156,14 +15215,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(93:14) <Button color=\\\"primary\\\">",
+    		source: "(96:14) <Button color=\\\"primary\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (95:14) <Button color="primary">
+    // (98:14) <Button color="primary">
     function create_default_slot_7$2(ctx) {
     	let t;
 
@@ -15183,14 +15242,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(95:14) <Button color=\\\"primary\\\">",
+    		source: "(98:14) <Button color=\\\"primary\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:14) <Button color="primary">
+    // (101:14) <Button color="primary">
     function create_default_slot_6$5(ctx) {
     	let t;
 
@@ -15210,14 +15269,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$5.name,
     		type: "slot",
-    		source: "(98:14) <Button color=\\\"primary\\\">",
+    		source: "(101:14) <Button color=\\\"primary\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:15) <Button color="info">
+    // (104:15) <Button color="info">
     function create_default_slot_5$5(ctx) {
     	let t;
 
@@ -15237,14 +15296,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$5.name,
     		type: "slot",
-    		source: "(101:15) <Button color=\\\"info\\\">",
+    		source: "(104:15) <Button color=\\\"info\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:10) <CardBody>
+    // (92:10) <CardBody>
     function create_default_slot_4$6(ctx) {
     	let cardsubtitle;
     	let t0;
@@ -15326,13 +15385,13 @@ var app = (function () {
     			a3 = element("a");
     			create_component(button3.$$.fragment);
     			attr_dev(a0, "href", "https://sos2122-11.herokuapp.com/api/v2/education-stats");
-    			add_location(a0, file$b, 91, 12, 2863);
+    			add_location(a0, file$b, 94, 12, 3012);
     			attr_dev(a1, "href", "/#/education-stats");
-    			add_location(a1, file$b, 93, 12, 2999);
+    			add_location(a1, file$b, 96, 12, 3148);
     			attr_dev(a2, "href", "/#/education-stats/analytics");
-    			add_location(a2, file$b, 96, 12, 3117);
+    			add_location(a2, file$b, 99, 12, 3266);
     			attr_dev(a3, "href", "https://documenter.getpostman.com/view/19481545/UyrBhvbJ");
-    			add_location(a3, file$b, 99, 12, 3253);
+    			add_location(a3, file$b, 102, 12, 3402);
     		},
     		m: function mount(target, anchor) {
     			mount_component(cardsubtitle, target, anchor);
@@ -15431,14 +15490,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$6.name,
     		type: "slot",
-    		source: "(89:10) <CardBody>",
+    		source: "(92:10) <CardBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:10) <CardFooter              >
+    // (107:10) <CardFooter              >
     function create_default_slot_3$6(ctx) {
     	let t0;
     	let a;
@@ -15449,7 +15508,7 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "David Sousa";
     			attr_dev(a, "href", "https://github.com/dasougon7");
-    			add_location(a, file$b, 105, 12, 3508);
+    			add_location(a, file$b, 108, 12, 3657);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -15466,14 +15525,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$6.name,
     		type: "slot",
-    		source: "(104:10) <CardFooter              >",
+    		source: "(107:10) <CardFooter              >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:8) <Card class="mb-3">
+    // (88:8) <Card class="mb-3">
     function create_default_slot_2$8(ctx) {
     	let cardheader;
     	let t0;
@@ -15571,7 +15630,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$8.name,
     		type: "slot",
-    		source: "(85:8) <Card class=\\\"mb-3\\\">",
+    		source: "(88:8) <Card class=\\\"mb-3\\\">",
     		ctx
     	});
 
@@ -15741,7 +15800,7 @@ var app = (function () {
 
     	container0 = new Container({
     			props: {
-    				$$slots: { default: [create_default_slot_27] },
+    				$$slots: { default: [create_default_slot_28] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15749,7 +15808,7 @@ var app = (function () {
 
     	container1 = new Container({
     			props: {
-    				$$slots: { default: [create_default_slot_24] },
+    				$$slots: { default: [create_default_slot_25] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15760,7 +15819,7 @@ var app = (function () {
     				id: "analyticsbtn",
     				color: "primary",
     				href: "https://sos2122-11.herokuapp.com/#/analytics",
-    				$$slots: { default: [create_default_slot_23] },
+    				$$slots: { default: [create_default_slot_24] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15771,7 +15830,7 @@ var app = (function () {
     				id: "integrationsbtn",
     				color: "primary",
     				href: "https://sos2122-11.herokuapp.com/#/integrations",
-    				$$slots: { default: [create_default_slot_22] },
+    				$$slots: { default: [create_default_slot_23] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -19671,7 +19730,7 @@ var app = (function () {
     	//GET
     	async function getData() {
     		console.log("Fetching inequality Data...");
-    		const res = await fetch("/api/v1/inequality-stats?limit=10" + "&offset=" + page);
+    		const res = await fetch("/api/v2/inequality-stats?limit=10" + "&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -19687,8 +19746,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function loadInitialData() {
     		console.log("Fetching inequality data...");
-    		await fetch("/api/v1/inequality-stats/loadInitialData");
-    		const res = await fetch("/api/v1/inequality-stats?limit=10" + "&offset=" + page);
+    		await fetch("/api/v2/inequality-stats/loadInitialData");
+    		const res = await fetch("/api/v2/inequality-stats?limit=10" + "&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -19739,7 +19798,7 @@ var app = (function () {
     		}
 
     		/// window.alert(Ucountry+"&year="+Uyear+"&from="+Ufrom+"&to="+Uto+"&coefficients="+coefficients+"&educations="+educations+"&lifes="+lifes);
-    		const res = await fetch("/api/v1/inequality-stats?country=" + Ucountry + "&year=" + Uyear + "&from=" + Ufrom + "&to=" + Uto + "&coefficients=" + coefficients + "&educations=" + educations + "&lifes=" + lifes);
+    		const res = await fetch("/api/v2/inequality-stats?country=" + Ucountry + "&year=" + Uyear + "&from=" + Ufrom + "&to=" + Uto + "&coefficients=" + coefficients + "&educations=" + educations + "&lifes=" + lifes);
 
     		if (res.ok) {
     			const json = await res.json();
@@ -19768,7 +19827,7 @@ var app = (function () {
 
     		visible = true;
     		console.log("Charging page... Listing since: " + page);
-    		const res = await fetch("/api/v1/inequality-stats?limit=10&offset=" + (-1 + page));
+    		const res = await fetch("/api/v2/inequality-stats?limit=10&offset=" + (-1 + page));
     		color = "success";
 
     		$$invalidate(8, errorMSG = page + 5 > totaldata
@@ -19800,7 +19859,7 @@ var app = (function () {
 
     		visible = true;
     		console.log("Charging page... Listing since: " + page);
-    		const res = await fetch("/api/v1/inequality-stats?limit=10&offset=" + (-1 + page));
+    		const res = await fetch("/api/v2/inequality-stats?limit=10&offset=" + (-1 + page));
     		color = "success";
 
     		$$invalidate(8, errorMSG = page + 5 > totaldata
@@ -19830,7 +19889,7 @@ var app = (function () {
     		if (data.country == "" || data.country == null || data.year == "" || data.year == null) {
     			alert("Debes insertar el nombre del país y el año.");
     		} else {
-    			await fetch("/api/v1/inequality-stats", {
+    			await fetch("/api/v2/inequality-stats", {
     				method: "POST",
     				body: JSON.stringify(data),
     				headers: { "Content-Type": "application/json" }
@@ -19858,7 +19917,7 @@ var app = (function () {
 
     	//DELETE SPECIFIC
     	async function deleteData(name, year) {
-    		await fetch("/api/v1/inequality-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
+    		await fetch("/api/v2/inequality-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
     			visible = true;
     			getData();
 
@@ -19883,7 +19942,7 @@ var app = (function () {
     		console.log("Deleting inequality data...");
     		console.log("Deleting all unemployment data...");
 
-    		await fetch("/api/v1/inequality-stats/", { method: "DELETE" }).then(function (res) {
+    		await fetch("/api/v2/inequality-stats/", { method: "DELETE" }).then(function (res) {
     			if (res.ok) {
     				totaldata = 0;
     				getData();

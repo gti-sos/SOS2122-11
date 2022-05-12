@@ -76,6 +76,41 @@ var inequalitystatsInit = [
         coefficients:"23.6",
         educations:"22",
         lifes:"10.9"
+    },
+    {
+        country:"España",
+        year:"2018",
+        coefficients:"14.0",
+        educations:"16.9",
+        lifes:"3.0"
+    },
+    {
+        country:"España",
+        year:"2019",
+        coefficients:"13.1",
+        educations:"17.5",
+        lifes:"3.5"
+    },
+    {
+        country:"Italia",
+        year:"2018",
+        coefficients:"11.8",
+        educations:"10.6",
+        lifes:"3.1"
+    },
+    {
+        country:"Alemania",
+        year:"2019",
+        coefficients:"7.9",
+        educations:"2.3",
+        lifes:"3.8"
+    },
+    {
+        country:"Francia",
+        year:"2018",
+        coefficients:"9.1",
+        educations:"9.5",
+        lifes:"3.8"
     }];
 
 	
