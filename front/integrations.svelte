@@ -27,8 +27,8 @@
             <ul style="font-size: 22px;"><strong>Integraciones</strong></ul>
 
             <ul style="list-style-type:circle; font-size: 20px;">
-                <li><a href="#/inequality-stats/ApiIntegracion27Expenditure">ACon API G27 Gasto</a></li>
-                <li><a href="#/inequality-stats/ApiIntegracion27Debt">Con API G27 Deuda</a></li>
+                <li><a href="#/inequality-stats/ApiIntegracion27Expenditure">ACon API Gasto</a></li>
+                <li><a href="#/inequality-stats/ApiIntegracion27Debt">Con API Deuda</a></li>
 
 
         <ul style="font-size: 22px;"><strong>Personal</strong></ul>

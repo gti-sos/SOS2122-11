@@ -42,7 +42,7 @@
                 {x: datosAñosIneq, y: inequalityCoefficients, stackgroup: 'two'},
                 {x: datosAñosDebt, y: debt_gdp, stackgroup: 'three'},
             ];
-            Plotly.newPlot('myDiv', traces, {title: 'stacked and filled line chart'});
+            Plotly.newPlot('myDiv', traces, {title: 'Azul:Coeficiente de desigualdad. Naranja: Deuda publica'});
 }
 </script>
 
