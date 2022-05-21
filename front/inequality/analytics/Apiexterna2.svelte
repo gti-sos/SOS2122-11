@@ -27,7 +27,6 @@
       var array = [];
      
       apienfermedad.forEach(x =>{
-        console.log(Object.keys(x));
         aux={ 
             name: x.province,
             data:[x.casesPerHundredThousand,0]

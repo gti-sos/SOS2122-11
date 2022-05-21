@@ -25,6 +25,7 @@
 	
 	const routes = {
 		"/": Home,
+		"/Home": Home,
 		"/info": Home,
 		"/analytics":Analytics,
 		"/integrations":Integrations,

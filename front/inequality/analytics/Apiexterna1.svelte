@@ -6,7 +6,7 @@
     let obj;
     let data=[];
 	async function loadGraph(){
-        console.log("");	
+  	
 		const res = await fetch(APIext);  //Piped proxy
 		if (res.ok) {
 			console.log("Ok, loaded successfully");
@@ -17,7 +17,6 @@
         }
         
         Divisa.forEach(x =>{
-        console.log(Object.keys(x));
         obj = {
                     name: x.name,
                     weight: parseFloat(x.maximal_amount) 
