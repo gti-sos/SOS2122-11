@@ -16,7 +16,7 @@
 	onMount(getPais);
 async function getPais(){
     console.log("Fetching country....");
-    const res = await fetch("/api/v1/inequality-stats/" + params.country + "/" + params.year);
+    const res = await fetch("/api/v2/inequality-stats/" + params.country + "/" + params.year);
     if(res.ok){
         console.log("Ok:");
         const json = await res.json();
@@ -34,7 +34,7 @@ async function getPais(){
 }
 async function actualizaPais(){
 		console.log("Updating country...." + JSON.stringify(params.country));
-		const res = await fetch("/api/v1/inequality-stats/" + params.country + "/" + params.year,{
+		const res = await fetch("/api/v2/inequality-stats/" + params.country + "/" + params.year,{
 			method: "PUT",
 			body: JSON.stringify({
                 country : params.country,
