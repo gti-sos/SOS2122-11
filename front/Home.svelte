@@ -51,7 +51,7 @@
     </Container>
   <Button  id ="analyticsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/analytics">Gráfica Grupal</Button>
   <Button  id ="integrationsbtn" color = primary href="https://sos2122-11.herokuapp.com/#/integrations">Integraciones</Button>
- 
+  <Button  id ="integrationsbtn" color = primary href="/#/about">Funcionalidades</Button> 
 
   
     <h2>APIs</h2>

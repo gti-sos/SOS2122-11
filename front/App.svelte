@@ -5,6 +5,7 @@
 	import Router from 'svelte-spa-router';
 	import Analytics from "./Analytics.svelte";
 	import Integrations from "./integrations.svelte";
+	import Videos from "./videos.svelte";
 	// Tony
 
 	import InequalityTable from './inequality/inequalityTable.svelte';
@@ -29,6 +30,7 @@
 		"/info": Home,
 		"/analytics":Analytics,
 		"/integrations":Integrations,
+		"/about":Videos,
 
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
