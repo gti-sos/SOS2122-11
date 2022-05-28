@@ -14,7 +14,7 @@ app.use(cors());
 
 //Inicializacion de Apis
 //Inequality stats
-var inequality_api = require("./src/back/inequality-stats-api");
+var inequality_api = require("./src/back/inequality-stats-api/v1");
 inequality_api.register(app);
 var inequality_api = require("./src/back/inequality-stats-api/v2");
 inequality_api.register(app);
