@@ -14,10 +14,14 @@ app.use(cors());
 
 //Inicializacion de Apis
 //Inequality stats
-//var inequality_api = require("./src/back/inequality-stats-api");
-//inequality_api.register(app);
+var inequality_api = require("./src/back/inequality-stats-api");
+inequality_api.register(app);
 var inequality_api = require("./src/back/inequality-stats-api/v2");
 inequality_api.register(app);
+
+const apiext3 = require("./src/back/inequality-stats-api/apiexterna3");
+apiext3.register(app);
+
 
 //Education stats
 var education_api = require("./src/back/education-stats-api/");

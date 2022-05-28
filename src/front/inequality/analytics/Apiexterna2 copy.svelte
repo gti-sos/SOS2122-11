@@ -3,6 +3,8 @@
 <script>
     import { Nav, NavItem, NavLink } from "sveltestrap";
     //Uso de API externa rick and morty
+    
+    
     var apienfermedad = [];
     let aux = []
 		let array = []
