@@ -19,8 +19,15 @@ inequality_api.register(app);
 var inequality_api = require("./src/back/inequality-stats-api/v2");
 inequality_api.register(app);
 
-const apiext3 = require("./src/back/inequality-stats-api/apiexterna3");
-apiext3.register(app);
+//proxy
+var paths='/apiexterna2';
+var apiServerHost = 'https://disease.sh/v2/gov/Germany';
+
+app.use(paths, function(req, res) {
+  var url = apiServerHost + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
 
 
 //Education stats

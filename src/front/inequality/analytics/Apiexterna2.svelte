@@ -3,6 +3,10 @@
 <script>
     import { Nav, NavItem, NavLink } from "sveltestrap";
     //Uso de API externa rick and morty
+    
+
+
+    
     var apienfermedad = [];
     let aux = []
 		let array = []
@@ -10,16 +14,12 @@
     var okMsg = "";
     async function getStats() {
       console.log("Fetching data...");
-      const res = await fetch("http://localhost:8080/api/tony/apiext1");
-      console.log(res);
-
+      const res = await fetch("/apiexterna2");
       if (res.ok) {
         const json = await res.json();
-        console.log(json);
         console.log(`We have received ${json} characters.`);
         console.log("Ok");
         apienfermedad=json;
-        
       } else {
         errorMsg = "Error al obtener los  datos de api externa";
         okMsg = "";
