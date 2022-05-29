@@ -31,7 +31,7 @@
 		"/info": Home,
 		"/analytics":Analytics,
 		"/integrations":Integrations,
-		 "/about":Videos,
+		"/about":Videos,
 
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
