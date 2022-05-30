@@ -5,7 +5,7 @@
 	import Router from 'svelte-spa-router';
 	import Analytics from "./Analytics.svelte";
 	import Integrations from "./integrations.svelte";
-	import Videos from "./videos.svelte";
+	import About from "./acerca.svelte";
 	// Tony
 
 	import InequalityTable from './inequality/inequalityTable.svelte';
@@ -16,15 +16,16 @@
 	import Apiexterna2Tony from './inequality/analytics/Apiexterna2.svelte';
 	import ApiG27ExpenditureTony from './inequality/analytics/APIG27Expenditure.svelte';
 	import ApiG27DebtTony from './inequality/analytics/APIG27Debt.svelte';
+	import ApiG20FertilizerTony from './inequality/analytics/APIG20Fertilizers.svelte';
 
 
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
-	import EducationHighcharts from '../src/front/education-stats/analytics/EducationHighcharts.svelte';
-	import EducationEcharts from '../src/front/education-stats/analytics/EducationEcharts.svelte';
-	import Apig10Population from '../src/front/education-stats/analytics/APIG10Population.svelte';
-	import Apig27Smi from '../src/front/education-stats/analytics/APIG27SMI.svelte';
-	import ApiExterna1 from '../src/front/education-stats/analytics/ApiExterna1.svelte';
+	import EducationHighcharts from './education-stats/analytics/EducationHighcharts.svelte';
+	import EducationEcharts from './education-stats/analytics/EducationEcharts.svelte';
+	import Apig10Population from './education-stats/analytics/APIG10Population.svelte';
+	import Apig27Smi from './education-stats/analytics/APIG27SMI.svelte';
+	import ApiExterna1 from './education-stats/analytics/ApiExterna1.svelte';
 
 
 	
@@ -34,7 +35,7 @@
 		"/info": Home,
 		"/analytics":Analytics,
 		"/integrations":Integrations,
-		"/about":Videos,
+		"/about":About,
 
 		"/inequality-stats": InequalityTable,
 		"/inequality-stats/:country/:year": EINEQ,
@@ -44,7 +45,7 @@
 		"/inequality-stats/Apiexterna2tony":Apiexterna2Tony,
 		"/inequality-stats/ApiIntegracion27Expenditure":ApiG27ExpenditureTony,
 		"/inequality-stats/ApiIntegracion27Debt":ApiG27DebtTony,
-
+		"/inequality-stats/ApiIntegracion20Fertilizer":ApiG20FertilizerTony,
 		"/education-stats/": EducationTable,
 		"/education-stats/:country/:year": EditEducationTable,
 		"/education-stats/educationHighcharts": EducationHighcharts,

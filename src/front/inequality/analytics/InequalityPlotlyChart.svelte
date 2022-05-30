@@ -65,7 +65,7 @@
           <NavLink href="#/integrations">Integrations</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#/unemployment-stats">Datos</NavLink>
+          <NavLink href="#/Inequality-stats">Datos</NavLink>
         </NavItem>
   
         <p color="blue">Marca azul: Coeficiente de desigualdad|| Marca naranja: Desigualdad en educación

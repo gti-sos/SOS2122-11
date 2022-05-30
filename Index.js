@@ -14,10 +14,21 @@ app.use(cors());
 
 //Inicializacion de Apis
 //Inequality stats
-//var inequality_api = require("./src/back/inequality-stats-api");
-//inequality_api.register(app);
+var inequality_api = require("./src/back/inequality-stats-api/v1");
+inequality_api.register(app);
 var inequality_api = require("./src/back/inequality-stats-api/v2");
 inequality_api.register(app);
+
+//proxy
+var paths='/apiexterna2';
+var apiServerHost = 'https://disease.sh/v2/gov/Germany';
+
+app.use(paths, function(req, res) {
+  var url = apiServerHost + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
+
 
 //Education stats
 var education_api = require("./src/back/education-stats-api/");

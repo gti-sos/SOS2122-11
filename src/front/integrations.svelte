@@ -30,7 +30,8 @@
             <ul style="list-style-type:circle; font-size: 20px;">
                 <li><a href="#/inequality-stats/ApiIntegracion27Expenditure">Con API Gasto</a></li>
                 <li><a href="#/inequality-stats/ApiIntegracion27Debt">Con API Deuda</a></li>
-
+                <li><a href="#/inequality-stats/ApiIntegracion20Fertilizer">Con API Abono</a></li>
+                
 
         <ul style="font-size: 22px;"><strong>Personal</strong></ul>
 
