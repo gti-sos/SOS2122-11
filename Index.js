@@ -21,7 +21,26 @@ inequality_api.register(app);
 
 //Education stats
 var education_api = require("./src/back/education-stats-api/");
+
+	//Proxys
+var paths = '/remoteApiSMI';
+var apiServerHost = 'https://sos2122-27.herokuapp.com/api/v2/smi_stats'; 
+
+app.use(paths, function(req, res){
+	var url = apiServerHost + req.url;
+	req.pipe(request(url)).pipe(res);
+});
+
+var paths1='/remoteApiAnimals';
+var apiServerHost1 = 'http://bloowatch.org/developers/json/species';
+
+app.use(paths1, function(req, res) {
+  var url = apiServerHost1 + req.url;
+  req.pipe(request(url)).pipe(res);
+});
 education_api.register(app);
+
+
 
 
 

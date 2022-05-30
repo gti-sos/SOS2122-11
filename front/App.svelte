@@ -20,7 +20,11 @@
 
 	import EducationTable from './education-stats/EducationTable.svelte';
 	import EditEducationTable from './education-stats/EditEducationTable.svelte';
-	import EducationAnalytics from './education-stats/EducationAnalytics.svelte';
+	import EducationHighcharts from './education-stats/analytics/EducationHighcharts.svelte';
+	import EducationEcharts from './education-stats/analytics/EducationEcharts.svelte';
+	import Apig10Population from './education-stats/analytics/APIG10Population.svelte';
+	import Apig27Smi from './education-stats/analytics/APIG27SMI.svelte';
+	import ApiExterna1 from './education-stats/analytics/ApiExterna1.svelte';
 
 
 	
@@ -40,9 +44,15 @@
 		"/inequality-stats/Apiexterna2tony":Apiexterna2Tony,
 		"/inequality-stats/ApiIntegracion27Expenditure":ApiG27ExpenditureTony,
 		"/inequality-stats/ApiIntegracion27Debt":ApiG27DebtTony,
+
 		"/education-stats/": EducationTable,
 		"/education-stats/:country/:year": EditEducationTable,
-		"/education-stats/analytics": EducationAnalytics,
+		"/education-stats/educationHighcharts": EducationHighcharts,
+		"/education-stats/educationEcharts": EducationEcharts,
+		"/education-stats/ApiG10Population": Apig10Population,
+		"/education-stats/ApiG27SMI": Apig27Smi,
+		"/education-stats/ApiExterna1": ApiExterna1	
+
 		};
 </script>
 <main>

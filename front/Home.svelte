@@ -97,8 +97,11 @@
             <a href="/#/education-stats">
               <Button color="primary">Interfaz</Button>
             </a>
-            <a href="/#/education-stats/analytics">
-              <Button color="primary">Grafica Doughnut</Button>
+            <a href="/#/education-stats/educationHighcharts">
+              <Button color="primary">Grafica Highchart (Doughnut)</Button>
+            </a>
+            <a href="/#/education-stats/educationEcharts">
+              <Button color="primary">Grafica Echarts</Button>
             </a>
             <a href="https://documenter.getpostman.com/view/19481545/UyrBhvbJ"
               ><Button color="info">Documentación Backend en Postman</Button></a>
